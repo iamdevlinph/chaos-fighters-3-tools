@@ -1,0 +1,17 @@
+[{
+    "id": 1,
+    "name": "ordinary"
+  },
+  {
+    "id": 2,
+    "name": "rare"
+  },
+  {
+    "id": 3,
+    "name": "epic"
+  },
+  {
+    "id": 4,
+    "name": "legendary"
+  }
+]
