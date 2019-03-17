@@ -1,0 +1,41 @@
+[{
+    "id": 1,
+    "focus": "water"
+  },
+  {
+    "id": 2,
+    "focus": "fire"
+  },
+  {
+    "id": 3,
+    "focus": "earth"
+  },
+  {
+    "id": 4,
+    "focus": "thunder"
+  },
+  {
+    "id": 5,
+    "focus": "wind"
+  },
+  {
+    "id": 6,
+    "focus": "taijutsu"
+  },
+  {
+    "id": 7,
+    "focus": "ninjutsu"
+  },
+  {
+    "id": 8,
+    "focus": "fuinutsu"
+  },
+  {
+    "id": 9,
+    "focus": "genjutsu"
+  },
+  {
+    "id": 10,
+    "focus": "healing"
+  }
+]
