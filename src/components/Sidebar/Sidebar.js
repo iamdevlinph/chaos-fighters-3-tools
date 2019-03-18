@@ -7,22 +7,57 @@ const urls = [
   'tower'
 ]
 
-export default () => {
+export default (props) => {
+  console.log(props);
   const sidebarOptions = urls.map((val) => {
-    return (<Link key={val}><NavLink to={`/${val}`}>{val}</NavLink></Link>)
+    return (
+      <Link key={val}>
+        <NavLink to={`/${val}`}
+          activeClassName="active-route">{val}</NavLink>
+      </Link>
+    )
   })
   return (
-    <div>
+    <Sidebar>
       <SidebarHeader>
-        <NavLink to="/">Chaos Fighter 3</NavLink>
+        <NavLink to="/">Chaos Fighters 3</NavLink>
       </SidebarHeader>
       <SidebarOptionsArea>
         {sidebarOptions}
       </SidebarOptionsArea>
-    </div>
+    </Sidebar>
   )
 }
 
-const SidebarHeader = styled.div``;
-const SidebarOptionsArea = styled.div``;
-const Link = styled.div``;
+const Sidebar = styled.div`
+  white-space: nowrap;
+  height: 100vh;
+  background: #d4d4d4;
+`;
+const SidebarHeader = styled.div`
+  background: #FF4D00;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 2px -2px gray;
+  margin-bottom: 5px;
+  a {
+    color: white;
+  }
+`;
+const SidebarOptionsArea = styled.div`
+  text-transform: uppercase;
+  text-align: center;
+`;
+const Link = styled.div`
+  a {
+    display: block;
+    padding: 10px 0;
+    color: black;
+    /* color: white; */
+    &.active-route {
+      background: white;
+      font-weight: bold;
+    }
+  }
+`;
