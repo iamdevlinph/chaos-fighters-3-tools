@@ -8,7 +8,6 @@ const urls = [
 ]
 
 export default (props) => {
-  console.log(props);
   const sidebarOptions = urls.map((val) => {
     return (
       <Link key={val}>
