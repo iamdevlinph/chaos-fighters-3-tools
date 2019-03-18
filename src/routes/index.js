@@ -1,0 +1,32 @@
+import React from 'react';
+import {
+  HashRouter, Route, Switch,
+} from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import MainLayout from './MainLayout/MainLayout';
+import loadableCons from './loadable';
+
+const AppRoute = ({ container: Container, layout: Layout, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => (
+      <Layout>
+        <Container {...props} />
+      </Layout>
+    )}
+  />
+);
+
+export default () => (
+  <HashRouter>
+    <Switch>
+      <AppRoute exact path="/" layout={MainLayout} container={loadableCons.MainPage} />
+    </Switch>
+  </HashRouter>
+);
+
+AppRoute.propTypes = {
+  container: PropTypes.func.isRequired,
+  layout: PropTypes.func.isRequired,
+};
