@@ -26,7 +26,7 @@ const SidebarArea = styled.div`
 const ContentArea = styled.div`
   grid-area: content;
   box-shadow: inset 4px 0px 18px -5px rgba(0,0,0,0.75);
-  padding: 0 20px;
-  /* height: 95vh; */
+  padding: 20px;
+  height: 100vh;
   overflow: auto;
 `;
