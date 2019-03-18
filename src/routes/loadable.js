@@ -7,4 +7,12 @@ export default {
     loader: () => import('../containers/MainPage/MainPage'),
     loading: Loading,
   }),
+  FightersPage: Loadable({
+    loader: () => import('../containers/Fighters/Fighters'),
+    loading: Loading,
+  }),
+  TowerPage: Loadable({
+    loader: () => import('../containers/Tower/Tower'),
+    loading: Loading,
+  }),
 };

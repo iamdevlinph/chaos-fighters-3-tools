@@ -1,18 +1,21 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const urls = [
   'fighters',
-  'demon-tower'
+  'tower'
 ]
 
 export default () => {
   const sidebarOptions = urls.map((val) => {
-    return (<div key={val}>{val}</div>)
+    return (<Link key={val}><NavLink to={`/${val}`}>{val}</NavLink></Link>)
   })
   return (
     <div>
-      <SidebarHeader>Chaos Fighter 3</SidebarHeader>
+      <SidebarHeader>
+        <NavLink to="/">Chaos Fighter 3</NavLink>
+      </SidebarHeader>
       <SidebarOptionsArea>
         {sidebarOptions}
       </SidebarOptionsArea>
@@ -22,3 +25,4 @@ export default () => {
 
 const SidebarHeader = styled.div``;
 const SidebarOptionsArea = styled.div``;
+const Link = styled.div``;
