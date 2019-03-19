@@ -9,139 +9,149 @@ const headerStyle = {
   padding: '0px 10px',
   textAlign: 'center'
 }
-
+const defaultColOptions = {
+  filtering: false,
+  cellStyle,
+  headerStyle
+}
 const columns = [
   {
+    ...defaultColOptions,
     title: 'Name',
     field: 'name',
-    cellStyle,
-    headerStyle,
   },
   {
     title: 'Type',
     field: 'type',
-    cellStyle,
-    headerStyle,
+    lookup: {
+      epic: 'Epic',
+      legendary: 'Legendary'
+    },
     render: ({ type }) => StringUtil.toTitleCase(type)
   },
   {
+    ...defaultColOptions,
     title: 'STR',
     field: 'str',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'STR per level',
     field: 'strPerLevel',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'STR 1% ATK',
     field: 'strAtkPer',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'AGI',
     field: 'agi',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'AGI per level',
     field: 'agiPerLevel',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'AGI 1 SPD',
     field: 'agiSpdPer',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'AGI 1 EVA',
     field: 'agiEvaPer',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'END',
     field: 'end',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'END per level',
     field: 'endPerLevel',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'END 1% HP',
     field: 'endHpPer',
-    cellStyle,
-    headerStyle,
+    hidden: true,
   },
   {
+    ...defaultColOptions,
     title: 'Calculated STR',
     field: 'calcStr',
-    cellStyle,
-    headerStyle,
+    render: ({ calcStr }) => toTwoDecimal(calcStr)
   },
   {
+    ...defaultColOptions,
     title: 'Calculated ATK %',
     field: 'calcAtk',
-    cellStyle,
-    headerStyle,
     render: ({ calcAtk }) => `${toTwoDecimal(calcAtk)} %`
   },
   {
+    ...defaultColOptions,
     title: 'Calculated AGI',
     field: 'calcAgi',
-    cellStyle,
-    headerStyle,
+    render: ({ calcAgi }) => toTwoDecimal(calcAgi)
   },
   {
+    ...defaultColOptions,
     title: 'Calculated SPD',
     field: 'calcSpd',
-    cellStyle,
-    headerStyle,
     render: ({ calcSpd }) => toTwoDecimal(calcSpd)
   },
   {
+    ...defaultColOptions,
     title: 'Calculated EVA',
     field: 'calcEva',
-    cellStyle,
-    headerStyle,
     render: ({ calcEva }) => toTwoDecimal(calcEva)
   },
   {
+    ...defaultColOptions,
     title: 'Calculated END',
     field: 'calcEnd',
-    cellStyle,
-    headerStyle,
+    render: ({ calcEnd }) => toTwoDecimal(calcEnd)
   },
   {
+    ...defaultColOptions,
     title: 'Calculated HP %',
     field: 'calcHp',
-    cellStyle,
-    headerStyle,
     render: ({ calcHp }) => `${toTwoDecimal(calcHp)} %`
   },
   {
     title: 'Expert',
     field: 'expert',
-    cellStyle,
-    headerStyle,
+    lookup: {
+      water: 'Water',
+      fire: "Fire",
+      earth: "Earth",
+      thunder: "Thunder",
+      wind: "Wind",
+      taijutsu: "Taijutsu",
+      ninjutsu: "Ninjutsu",
+      fuinutsu: "Fuinutsu",
+      genjutsu: "Genjutsu",
+      healing: "Healing",
+    },
     render: ({ expert }) => StringUtil.toTitleCase(expert)
   },
   {
+    ...defaultColOptions,
     title: 'Weapon',
     field: 'weapon',
-    cellStyle,
-    headerStyle,
     emptyValue: '-',
     render: ({ weapon }) => StringUtil.toTitleCase(weapon)
   }

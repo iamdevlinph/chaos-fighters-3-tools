@@ -9,10 +9,22 @@ const pageSizeOptionsFromLen = (len) => {
   ]
 }
 
+const rowColors = {
+  epic: '#DB69AC',
+  legendary: '#FFA51A'
+}
+
 const tableOptions = (dataLen) => {
   return {
     pageSize: dataLen,
-    pageSizeOptions: pageSizeOptionsFromLen(dataLen)
+    pageSizeOptions: pageSizeOptionsFromLen(dataLen),
+    rowStyle: function (rowData) {
+      return {
+        background: rowColors[rowData.type],
+      }
+    },
+    columnsButton: true,
+    filtering: true
   }
 }
 
