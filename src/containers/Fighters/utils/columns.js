@@ -154,7 +154,8 @@ const columns = [
     title: 'Weapon',
     field: 'weapon',
     emptyValue: '-',
-    render: ({ weapon }) => StringUtil.toTitleCase(weapon)
+    render: ({ weapon }) => StringUtil.toTitleCase(weapon),
+    hidden: true
   }
 ];
 
