@@ -694,19 +694,20 @@
     "weapon": "staff"
   },
   {
-    "name": "",
+    "name": "Cute Colonel",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 10,
+    "strPerLevel": 4.8,
+    "strAtkPer": 21,
+    "agi": 14,
+    "agiPerLevel": 6.4,
+    "agiSpdPer": 14,
+    "agiEvaPer": 14,
+    "end": 24,
+    "endPerLevel": 9.6,
+    "endHpPer": 11,
+    "expert": "healing",
+    "weapon": "fist"
   },
   {
     "name": "",
