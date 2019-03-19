@@ -146,7 +146,8 @@ const columns = [
       genjutsu: "Genjutsu",
       healing: "Healing",
     },
-    render: ({ expert }) => StringUtil.toTitleCase(expert)
+    render: ({ expert }) => StringUtil.toTitleCase(expert),
+    hidden: true,
   },
   {
     ...defaultColOptions,
