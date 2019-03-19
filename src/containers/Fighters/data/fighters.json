@@ -678,19 +678,20 @@
     "weapon": "single sword"
   },
   {
-    "name": "",
+    "name": "Ghoul Princess",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 22,
+    "strPerLevel": 9.6,
+    "strAtkPer": 11,
+    "agi": 4,
+    "agiPerLevel": 1.6,
+    "agiSpdPer": 121,
+    "agiEvaPer": 121,
+    "end": 22,
+    "endPerLevel": 9.6,
+    "endHpPer": 11,
+    "expert": "taijutsu",
+    "weapon": "staff"
   },
   {
     "name": "",
