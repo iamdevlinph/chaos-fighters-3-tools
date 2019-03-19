@@ -30,7 +30,8 @@ export default (props) => {
 
 const Sidebar = styled.div`
   white-space: nowrap;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   background: #d4d4d4;
 `;
 const SidebarHeader = styled.div`
