@@ -614,19 +614,20 @@
     "weapon": "staff"
   },
   {
-    "name": "",
+    "name": "Frost Wold Chief",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 16,
+    "strPerLevel": 6.4,
+    "strAtkPer": 14,
+    "agi": 16,
+    "agiPerLevel": 6.4,
+    "agiSpdPer": 14,
+    "agiEvaPer": 14,
+    "end": 16,
+    "endPerLevel": 6.4,
+    "endHpPer": 13,
+    "expert": "fire",
+    "weapon": "heavy arm"
   },
   {
     "name": "",
