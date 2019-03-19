@@ -562,22 +562,24 @@
     "end": 16,
     "endPerLevel": 7.2,
     "endHpPer": 14,
-    "expert": ""
+    "expert": "ninjutsu",
+    "weapon": "single sword"
   },
   {
-    "name": "",
+    "name": "Shadowless",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 17,
+    "strPerLevel": 6.8,
+    "strAtkPer": 14,
+    "agi": 23,
+    "agiPerLevel": 9.2,
+    "agiSpdPer": 11,
+    "agiEvaPer": 11,
+    "end": 8,
+    "endPerLevel": 3.2,
+    "endHpPer": 20,
+    "expert": "taijutsu",
+    "weapon": "dagger"
   },
   {
     "name": "",
