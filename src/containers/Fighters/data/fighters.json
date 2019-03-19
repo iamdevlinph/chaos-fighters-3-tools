@@ -582,19 +582,20 @@
     "weapon": "dagger"
   },
   {
-    "name": "",
+    "name": "Monk",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 26,
+    "strPerLevel": 10.4,
+    "strAtkPer": 11,
+    "agi": 6,
+    "agiPerLevel": 2.4,
+    "agiSpdPer": 29,
+    "agiEvaPer": 29,
+    "end": 16,
+    "endPerLevel": 6.4,
+    "endHpPer": 15,
+    "expert": "wind",
+    "weapon": "staff"
   },
   {
     "name": "",
