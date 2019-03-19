@@ -10,7 +10,7 @@ class FightersContainer extends Component {
   constructor() {
     super();
     this.state = {
-      level: 1
+      level: 25
     }
   }
   levelChange(e) {
@@ -45,4 +45,8 @@ export default FightersContainer;
 
 const FighterLevel = styled.div`
   margin-bottom: 10px;
+  input {
+    text-align: center;
+    width: 50px;
+  }
 `;

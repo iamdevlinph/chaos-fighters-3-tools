@@ -15,4 +15,8 @@ export default {
     loader: () => import('../containers/Tower/Tower'),
     loading: Loading,
   }),
+  GlossaryPage: Loadable({
+    loader: () => import('../containers/Glossary/Glossary'),
+    loading: Loading,
+  }),
 };

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const urls = [
   'fighters',
-  'tower'
+  'tower',
+  'glossary'
 ]
 
 export default (props) => {
