@@ -10,6 +10,8 @@ const pageSizeOptionsFromLen = (len) => {
 }
 
 const rowColors = {
+  ordinary: '#CBC783',
+  rare: '#76BBC4',
   epic: '#DB69AC',
   legendary: '#FFA51A'
 }

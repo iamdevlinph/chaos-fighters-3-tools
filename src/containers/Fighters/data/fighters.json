@@ -501,5 +501,20 @@
     "endPerLevel": 9.6,
     "endHpPer": 19,
     "expert": "wind"
+  },
+  {
+    "name": "Bronzemen",
+    "type": "epic",
+    "str": 25,
+    "strPerLevel": 11.2,
+    "strAtkPer": 12,
+    "agi": 25,
+    "agiPerLevel": 10.4,
+    "agiSpdPer": 12,
+    "agiEvaPer": 12,
+    "end": 25,
+    "endPerLevel": 10.4,
+    "endHpPer": 12,
+    "expert": "wind"
   }
 ]

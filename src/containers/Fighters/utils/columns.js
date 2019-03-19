@@ -147,7 +147,6 @@ const columns = [
       healing: "Healing",
     },
     render: ({ expert }) => StringUtil.toTitleCase(expert),
-    hidden: true,
   },
   {
     ...defaultColOptions,
