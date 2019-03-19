@@ -24,6 +24,8 @@ const columns = [
     title: 'Type',
     field: 'type',
     lookup: {
+      ordinary: 'Ordinary',
+      rare: 'Rare',
       epic: 'Epic',
       legendary: 'Legendary'
     },
