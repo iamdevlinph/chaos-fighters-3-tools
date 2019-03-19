@@ -532,5 +532,52 @@
     "endHpPer": 10,
     "expert": "genjutsu",
     "weapon": "fist"
+  },
+  {
+    "name": "Grapple Kid",
+    "type": "ordinary",
+    "str": 24,
+    "strPerLevel": 7.2,
+    "strAtkPer": 13,
+    "agi": 8,
+    "agiPerLevel": 3.2,
+    "agiSpdPer": 24,
+    "agiEvaPer": 24,
+    "end": 16,
+    "endPerLevel": 8.8,
+    "endHpPer": 11,
+    "expert": "fire",
+    "weapon": "fist"
+  },
+  {
+    "name": "",
+    "type": "",
+    "str": 0,
+    "strPerLevel": 0,
+    "strAtkPer": 0,
+    "agi": 0,
+    "agiPerLevel": 0,
+    "agiSpdPer": 0,
+    "agiEvaPer": 0,
+    "end": 0,
+    "endPerLevel": 0,
+    "endHpPer": 0,
+    "expert": ""
+  },
+  {
+    "__ignore": true,
+    "name": "",
+    "type": "",
+    "str": 0,
+    "strPerLevel": 0,
+    "strAtkPer": 0,
+    "agi": 0,
+    "agiPerLevel": 0,
+    "agiSpdPer": 0,
+    "agiEvaPer": 0,
+    "end": 0,
+    "endPerLevel": 0,
+    "endHpPer": 0,
+    "expert": ""
   }
 ]
