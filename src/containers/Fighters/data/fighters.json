@@ -710,19 +710,20 @@
     "weapon": "fist"
   },
   {
-    "name": "",
+    "name": "Magic Girl",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 15,
+    "strPerLevel": 6.4,
+    "strAtkPer": 15,
+    "agi": 15,
+    "agiPerLevel": 6.4,
+    "agiSpdPer": 15,
+    "agiEvaPer": 15,
+    "end": 18,
+    "endPerLevel": 8,
+    "endHpPer": 12,
+    "expert": "genjutsu",
+    "weapon": "staff"
   },
   {
     "name": "",
