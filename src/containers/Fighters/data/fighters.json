@@ -18,6 +18,7 @@
   {
     "name": "Alice",
     "type": "legendary",
+    "typeId": 4,
     "str": 33,
     "strPerLevel": 14.4,
     "strAtkPer": 9,
@@ -34,6 +35,7 @@
   {
     "name": "Sabel",
     "type": "legendary",
+    "typeId": 4,
     "str": 30,
     "strPerLevel": 12.8,
     "strAtkPer": 12,
@@ -50,6 +52,7 @@
   {
     "name": "Alpaca Cavalry",
     "type": "legendary",
+    "typeId": 4,
     "str": 25,
     "strPerLevel": 11.6,
     "strAtkPer": 18,
@@ -66,6 +69,7 @@
   {
     "name": "Slasher",
     "type": "legendary",
+    "typeId": 4,
     "str": 29,
     "strPerLevel": 13.2,
     "strAtkPer": 11,
@@ -82,6 +86,7 @@
   {
     "name": "Madara",
     "type": "legendary",
+    "typeId": 4,
     "str": 30,
     "strPerLevel": 12.8,
     "strAtkPer": 12,
@@ -98,6 +103,7 @@
   {
     "name": "The Monkey King",
     "type": "epic",
+    "typeId": 3,
     "str": 25,
     "strPerLevel": 9.6,
     "strAtkPer": 13,
@@ -114,6 +120,7 @@
   {
     "name": "Tokugawa Leyasu",
     "type": "epic",
+    "typeId": 3,
     "str": 22,
     "strPerLevel": 9.6,
     "strAtkPer": 13,
@@ -130,6 +137,7 @@
   {
     "name": "Date Masamune",
     "type": "epic",
+    "typeId": 3,
     "str": 24,
     "strPerLevel": 8.8,
     "strAtkPer": 14,
@@ -146,6 +154,7 @@
   {
     "name": "Viking Warrior",
     "type": "legendary",
+    "typeId": 4,
     "str": 24,
     "strPerLevel": 10.8,
     "strAtkPer": 19,
@@ -161,6 +170,7 @@
   {
     "name": "Azrael",
     "type": "epic",
+    "typeId": 3,
     "str": 23,
     "strPerLevel": 11.2,
     "strAtkPer": 12,
@@ -176,6 +186,7 @@
   {
     "name": "Abe no Seimei",
     "type": "legendary",
+    "typeId": 4,
     "str": 32,
     "strPerLevel": 14.4,
     "strAtkPer": 8,
@@ -191,6 +202,7 @@
   {
     "name": "Ghost Guan Yu",
     "type": "legendary",
+    "typeId": 4,
     "str": 33,
     "strPerLevel": 14,
     "strAtkPer": 9,
@@ -206,6 +218,7 @@
   {
     "name": "Hollow Man",
     "type": "epic",
+    "typeId": 3,
     "str": 19,
     "strPerLevel": 9.6,
     "strAtkPer": 28,
@@ -221,6 +234,7 @@
   {
     "name": "Claude",
     "type": "legendary",
+    "typeId": 4,
     "str": 26,
     "strPerLevel": 11.6,
     "strAtkPer": 17,
@@ -236,6 +250,7 @@
   {
     "name": "Sound of Devils",
     "type": "legendary",
+    "typeId": 4,
     "str": 35,
     "strPerLevel": 14,
     "strAtkPer": 8,
@@ -251,6 +266,7 @@
   {
     "name": "Nezha",
     "type": "epic",
+    "typeId": 3,
     "str": 26,
     "strPerLevel": 10.4,
     "strAtkPer": 12,
@@ -266,6 +282,7 @@
   {
     "name": "Tang Sanzang",
     "type": "epic",
+    "typeId": 3,
     "str": 24,
     "strPerLevel": 14.4,
     "strAtkPer": 10,
@@ -281,6 +298,7 @@
   {
     "name": "Nobunaga",
     "type": "epic",
+    "typeId": 3,
     "str": 25,
     "strPerLevel": 10.4,
     "strAtkPer": 12,
@@ -296,6 +314,7 @@
   {
     "name": "Archangel",
     "type": "epic",
+    "typeId": 3,
     "str": 25,
     "strPerLevel": 11.2,
     "strAtkPer": 13,
@@ -311,6 +330,7 @@
   {
     "name": "Demoness",
     "type": "epic",
+    "typeId": 3,
     "str": 26,
     "strPerLevel": 9.6,
     "strAtkPer": 13,
@@ -326,6 +346,7 @@
   {
     "name": "Bruce Lee",
     "type": "epic",
+    "typeId": 3,
     "str": 22,
     "strPerLevel": 11.2,
     "strAtkPer": 11,
@@ -341,6 +362,7 @@
   {
     "name": "Bunny Girl",
     "type": "epic",
+    "typeId": 3,
     "str": 22,
     "strPerLevel": 6.4,
     "strAtkPer": 29,
@@ -356,6 +378,7 @@
   {
     "name": "Rose",
     "type": "legendary",
+    "typeId": 4,
     "str": 34,
     "strPerLevel": 14.4,
     "strAtkPer": 9,
@@ -371,6 +394,7 @@
   {
     "name": "Ichigo",
     "type": "legendary",
+    "typeId": 4,
     "str": 32,
     "strPerLevel": 13.6,
     "strAtkPer": 12,
@@ -386,6 +410,7 @@
   {
     "name": "Oriental Lady",
     "type": "legendary",
+    "typeId": 4,
     "str": 32,
     "strPerLevel": 14,
     "strAtkPer": 8,
@@ -401,6 +426,7 @@
   {
     "name": "Mechwarrior 84",
     "type": "legendary",
+    "typeId": 4,
     "str": 33,
     "strPerLevel": 13.6,
     "strAtkPer": 13,
@@ -416,6 +442,7 @@
   {
     "name": "Kunoichi",
     "type": "epic",
+    "typeId": 3,
     "str": 28,
     "strPerLevel": 11.2,
     "strAtkPer": 10,
@@ -431,6 +458,7 @@
   {
     "name": "Bajie",
     "type": "epic",
+    "typeId": 3,
     "str": 23,
     "strPerLevel": 6.4,
     "strAtkPer": 29,
@@ -446,6 +474,7 @@
   {
     "name": "Thai Boxing King",
     "type": "epic",
+    "typeId": 3,
     "str": 25,
     "strPerLevel": 9.6,
     "strAtkPer": 12,
@@ -461,6 +490,7 @@
   {
     "name": "Ares",
     "type": "epic",
+    "typeId": 3,
     "str": 30,
     "strPerLevel": 9.6,
     "strAtkPer": 11,
@@ -476,6 +506,7 @@
   {
     "name": "Bloody Bride",
     "type": "epic",
+    "typeId": 3,
     "str": 24,
     "strPerLevel": 10.4,
     "strAtkPer": 13,
@@ -491,6 +522,7 @@
   {
     "name": "Guan Yu",
     "type": "epic",
+    "typeId": 3,
     "str": 30,
     "strPerLevel": 16,
     "strAtkPer": 8,
@@ -506,6 +538,7 @@
   {
     "name": "Bronzemen",
     "type": "epic",
+    "typeId": 3,
     "str": 25,
     "strPerLevel": 11.2,
     "strAtkPer": 12,
@@ -521,6 +554,7 @@
   {
     "name": "Peppa Pig",
     "type": "legendary",
+    "typeId": 4,
     "str": 36,
     "strPerLevel": 14.4,
     "strAtkPer": 9,
@@ -537,6 +571,7 @@
   {
     "name": "Grapple Kid",
     "type": "ordinary",
+    "typeId": 1,
     "str": 24,
     "strPerLevel": 7.2,
     "strAtkPer": 13,
@@ -553,6 +588,7 @@
   {
     "name": "Shiro Yasha",
     "type": "ordinary",
+    "typeId": 1,
     "str": 12,
     "strPerLevel": 4,
     "strAtkPer": 20,
@@ -569,6 +605,7 @@
   {
     "name": "Shadowless",
     "type": "ordinary",
+    "typeId": 1,
     "str": 17,
     "strPerLevel": 6.8,
     "strAtkPer": 14,
@@ -585,6 +622,7 @@
   {
     "name": "Monk",
     "type": "ordinary",
+    "typeId": 1,
     "str": 26,
     "strPerLevel": 10.4,
     "strAtkPer": 11,
@@ -601,6 +639,7 @@
   {
     "name": "Little Magic Girl",
     "type": "ordinary",
+    "typeId": 1,
     "str": 14,
     "strPerLevel": 4.8,
     "strAtkPer": 21,
@@ -617,6 +656,7 @@
   {
     "name": "Frost Wold Chief",
     "type": "ordinary",
+    "typeId": 1,
     "str": 16,
     "strPerLevel": 6.4,
     "strAtkPer": 14,
@@ -633,6 +673,7 @@
   {
     "name": "Undead Thief",
     "type": "ordinary",
+    "typeId": 1,
     "str": 23,
     "strPerLevel": 9.6,
     "strAtkPer": 11,
@@ -649,6 +690,7 @@
   {
     "name": "Little Zombie",
     "type": "ordinary",
+    "typeId": 1,
     "str": 17,
     "strPerLevel": 7.2,
     "strAtkPer": 14,
@@ -665,6 +707,7 @@
   {
     "name": "Arn Tempelriddaren",
     "type": "ordinary",
+    "typeId": 1,
     "str": 16,
     "strPerLevel": 8,
     "strAtkPer": 13,
@@ -681,6 +724,7 @@
   {
     "name": "Ghoul Princess",
     "type": "ordinary",
+    "typeId": 1,
     "str": 22,
     "strPerLevel": 9.6,
     "strAtkPer": 11,
@@ -697,6 +741,7 @@
   {
     "name": "Cute Colonel",
     "type": "ordinary",
+    "typeId": 1,
     "str": 10,
     "strPerLevel": 4.8,
     "strAtkPer": 21,
@@ -713,6 +758,7 @@
   {
     "name": "Magic Girl",
     "type": "ordinary",
+    "typeId": 1,
     "str": 15,
     "strPerLevel": 6.4,
     "strAtkPer": 15,
@@ -729,6 +775,7 @@
   {
     "name": "Shogunate Samurai",
     "type": "ordinary",
+    "typeId": 1,
     "str": 12,
     "strPerLevel": 4.8,
     "strAtkPer": 29,
@@ -745,6 +792,7 @@
   {
     "name": "Polar Explorer",
     "type": "ordinary",
+    "typeId": 1,
     "str": 11,
     "strPerLevel": 5.2,
     "strAtkPer": 20,
