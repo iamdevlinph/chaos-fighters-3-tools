@@ -12,7 +12,8 @@
     "end": 0,
     "endPerLevel": 0,
     "endHpPer": 0,
-    "expert": ""
+    "expert": "",
+    "weapon": ""
   },
   {
     "name": "Alice",
@@ -726,6 +727,22 @@
     "weapon": "staff"
   },
   {
+    "name": "Shogunate Samurai",
+    "type": "ordinary",
+    "str": 12,
+    "strPerLevel": 4.8,
+    "strAtkPer": 29,
+    "agi": 10,
+    "agiPerLevel": 4,
+    "agiSpdPer": 39,
+    "agiEvaPer": 39,
+    "end": 26,
+    "endPerLevel": 10.4,
+    "endHpPer": 10,
+    "expert": "healing",
+    "weapon": "single sword"
+  },
+  {
     "name": "",
     "type": "ordinary",
     "str": 0,
@@ -754,6 +771,7 @@
     "end": 0,
     "endPerLevel": 0,
     "endHpPer": 0,
-    "expert": ""
+    "expert": "",
+    "weapon": ""
   }
 ]
