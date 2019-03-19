@@ -630,19 +630,20 @@
     "weapon": "heavy arm"
   },
   {
-    "name": "",
+    "name": "Undead Thief",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 23,
+    "strPerLevel": 9.6,
+    "strAtkPer": 11,
+    "agi": 7,
+    "agiPerLevel": 3.2,
+    "agiSpdPer": 21,
+    "agiEvaPer": 21,
+    "end": 18,
+    "endPerLevel": 8,
+    "endHpPer": 13,
+    "expert": "ninjutsu",
+    "weapon": "dagger"
   },
   {
     "name": "",
