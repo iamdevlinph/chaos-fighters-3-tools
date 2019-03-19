@@ -646,19 +646,20 @@
     "weapon": "dagger"
   },
   {
-    "name": "",
+    "name": "Little Zombie",
     "type": "ordinary",
-    "str": 0,
-    "strPerLevel": 0,
-    "strAtkPer": 0,
-    "agi": 0,
-    "agiPerLevel": 0,
-    "agiSpdPer": 0,
-    "agiEvaPer": 0,
-    "end": 0,
-    "endPerLevel": 0,
-    "endHpPer": 0,
-    "expert": ""
+    "str": 17,
+    "strPerLevel": 7.2,
+    "strAtkPer": 14,
+    "agi": 14,
+    "agiPerLevel": 5.6,
+    "agiSpdPer": 20,
+    "agiEvaPer": 20,
+    "end": 17,
+    "endPerLevel": 8,
+    "endHpPer": 11,
+    "expert": "taijutsu",
+    "weapon": "staff"
   },
   {
     "name": "",
