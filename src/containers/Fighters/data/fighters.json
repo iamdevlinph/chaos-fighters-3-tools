@@ -516,5 +516,21 @@
     "endPerLevel": 10.4,
     "endHpPer": 12,
     "expert": "wind"
+  },
+  {
+    "name": "Peppa Pig",
+    "type": "legendary",
+    "str": 36,
+    "strPerLevel": 14.4,
+    "strAtkPer": 9,
+    "agi": 25,
+    "agiPerLevel": 12,
+    "agiSpdPer": 15,
+    "agiEvaPer": 15,
+    "end": 10,
+    "endPerLevel": 13.6,
+    "endHpPer": 10,
+    "expert": "genjutsu",
+    "weapon": "fist"
   }
 ]
