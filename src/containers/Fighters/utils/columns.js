@@ -21,8 +21,10 @@ const columns = [
     field: 'name',
   },
   {
+    ...defaultColOptions,
     title: 'Type',
     field: 'type',
+    filtering: true,
     lookup: {
       ordinary: 'Ordinary',
       rare: 'Rare',
@@ -134,8 +136,10 @@ const columns = [
     render: ({ calcHp }) => `${toTwoDecimal(calcHp)} %`
   },
   {
+    ...defaultColOptions,
     title: 'Expert',
     field: 'expert',
+    filtering: true,
     lookup: {
       water: 'Water',
       fire: "Fire",
