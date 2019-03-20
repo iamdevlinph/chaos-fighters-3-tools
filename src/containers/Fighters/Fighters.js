@@ -14,8 +14,6 @@ class FightersContainer extends Component {
     }
   }
   levelChange(e) {
-    console.log(e);
-    console.log(e.currentTarget.value);
     this.setState({
       level: e.currentTarget.value
     })
