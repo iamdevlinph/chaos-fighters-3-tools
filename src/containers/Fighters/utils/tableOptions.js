@@ -1,10 +1,3 @@
-const rowColors = {
-  ordinary: '#CBC783',
-  rare: '#76BBC4',
-  epic: '#DB69AC',
-  legendary: '#FFA51A'
-}
-
 const tableOptions = (dataLen) => {
   return {
     emptyRowsWhenPaging: false,
@@ -14,7 +7,7 @@ const tableOptions = (dataLen) => {
     ],
     rowStyle: function (rowData) {
       return {
-        background: rowColors[rowData.type],
+        background: rowData.typeColor,
       }
     },
     columnsButton: true,

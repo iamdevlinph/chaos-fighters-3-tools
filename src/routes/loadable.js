@@ -19,4 +19,8 @@ export default {
     loader: () => import('../containers/Glossary/Glossary'),
     loading: Loading,
   }),
+  NotFound: Loadable({
+    loader: () => import('../containers/NotFound/NotFound'),
+    loading: Loading,
+  }),
 };

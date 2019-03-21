@@ -8,6 +8,14 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  * {
+    outline: none;
+  }
+  .page-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 `;
 
 export default GlobalStyle;

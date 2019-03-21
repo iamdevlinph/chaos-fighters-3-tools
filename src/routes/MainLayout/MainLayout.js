@@ -17,11 +17,12 @@ export default (props) => {
 
 const MainLayout = styled.div`
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: 185px 1fr;
   grid-template-areas: "sidebar content";
 `;
 const SidebarArea = styled.div`
   grid-area: sidebar;
+  position: fixed;
 `;
 const ContentArea = styled.div`
   grid-area: content;
@@ -29,4 +30,6 @@ const ContentArea = styled.div`
   padding: 20px;
   /* height: 100vh; */
   overflow: auto;
+  margin-left: -1px;
+  height: 94.5vh;
 `;

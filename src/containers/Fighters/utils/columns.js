@@ -1,6 +1,6 @@
 import { StringUtil } from 'common-utils-pkg';
 
-const toTwoDecimal = (val) => val.toFixed(2);
+// const toTwoDecimal = (val) => val.toFixed(0);
 const cellStyle = {
   whiteSpace: 'nowrap',
   padding: '0 10px',
@@ -12,13 +12,15 @@ const headerStyle = {
 const defaultColOptions = {
   filtering: false,
   cellStyle,
-  headerStyle
+  headerStyle,
+  hidden: true
 }
 const columns = [
   {
     ...defaultColOptions,
     title: 'Name',
     field: 'name',
+    hidden: false,
   },
   {
     ...defaultColOptions,
@@ -31,109 +33,114 @@ const columns = [
       epic: 'Epic',
       legendary: 'Legendary'
     },
-    render: ({ type }) => StringUtil.toTitleCase(type)
+    hidden: false,
+    render: ({ type }) => StringUtil.toTitleCase(type),
+    customSort: (a, b) => a.typeId - b.typeId,
   },
   {
     ...defaultColOptions,
-    title: 'STR',
+    title: 'ISV STR',
     field: 'str',
-    hidden: true,
   },
   {
     ...defaultColOptions,
-    title: 'STR per level',
-    field: 'strPerLevel',
-    hidden: true,
+    title: 'Growth STR',
+    field: 'strGrowth',
   },
   {
     ...defaultColOptions,
-    title: 'STR 1% ATK',
-    field: 'strAtkPer',
-    hidden: true,
+    title: 'BMV STR', // 1% ATK
+    field: 'strBmv',
   },
   {
     ...defaultColOptions,
-    title: 'AGI',
+    title: 'ISV AGI',
     field: 'agi',
-    hidden: true,
   },
   {
     ...defaultColOptions,
-    title: 'AGI per level',
-    field: 'agiPerLevel',
-    hidden: true,
+    title: 'Growth AGI',
+    field: 'agiGrowth',
   },
   {
     ...defaultColOptions,
-    title: 'AGI 1 SPD',
-    field: 'agiSpdPer',
-    hidden: true,
+    title: 'BMV AGI', // 1 SPD 1 EVA
+    field: 'agiBmv',
   },
+  // {
+  //   ...defaultColOptions,
+  //   title: 'AGI 1 EVA',
+  //   field: 'agiEvaPer',
+  // },
   {
     ...defaultColOptions,
-    title: 'AGI 1 EVA',
-    field: 'agiEvaPer',
-    hidden: true,
-  },
-  {
-    ...defaultColOptions,
-    title: 'END',
+    title: 'ISV END',
     field: 'end',
-    hidden: true,
   },
   {
     ...defaultColOptions,
-    title: 'END per level',
-    field: 'endPerLevel',
-    hidden: true,
+    title: 'Growth END',
+    field: 'endGrowth',
   },
   {
     ...defaultColOptions,
-    title: 'END 1% HP',
-    field: 'endHpPer',
-    hidden: true,
+    title: 'BMV END', // 1% HP
+    field: 'endBmv',
   },
   {
     ...defaultColOptions,
-    title: 'Calculated STR',
+    title: 'Max STR',
     field: 'calcStr',
-    render: ({ calcStr }) => toTwoDecimal(calcStr)
+    hidden: false,
+    render: ({ calcStr }) => (calcStr),
+    customSort: (a, b) => a.calcStr - b.calcStr,
   },
   {
     ...defaultColOptions,
-    title: 'Calculated ATK %',
+    title: 'Max %ATK',
     field: 'calcAtk',
-    render: ({ calcAtk }) => `${toTwoDecimal(calcAtk)} %`
+    hidden: false,
+    render: ({ calcAtk }) => `${(calcAtk)} %`,
+    customSort: (a, b) => a.calcAtk - b.calcAtk,
   },
   {
     ...defaultColOptions,
-    title: 'Calculated AGI',
+    title: 'Max AGI',
     field: 'calcAgi',
-    render: ({ calcAgi }) => toTwoDecimal(calcAgi)
+    hidden: false,
+    render: ({ calcAgi }) => (calcAgi),
+    customSort: (a, b) => a.calcAgi - b.calcAgi,
   },
   {
     ...defaultColOptions,
-    title: 'Calculated SPD',
+    title: 'Max SPD/EVA',
     field: 'calcSpd',
-    render: ({ calcSpd }) => toTwoDecimal(calcSpd)
+    hidden: false,
+    render: ({ calcSpd }) => (calcSpd),
+    customSort: (a, b) => a.calcSpd - b.calcSpd,
   },
+  // {
+  //   ...defaultColOptions,
+  //   title: 'Max EVA',
+  //   field: 'calcEva',
+  //   hidden: false,
+  //   render: ({ calcEva }) => toTwoDecimal(calcEva)
+  // },
   {
     ...defaultColOptions,
-    title: 'Calculated EVA',
-    field: 'calcEva',
-    render: ({ calcEva }) => toTwoDecimal(calcEva)
-  },
-  {
-    ...defaultColOptions,
-    title: 'Calculated END',
+    title: 'Max END',
     field: 'calcEnd',
-    render: ({ calcEnd }) => toTwoDecimal(calcEnd)
+    hidden: false,
+    render: ({ calcEnd }) => (calcEnd),
+    customSort: (a, b) => a.calcEnd - b.calcEnd,
   },
   {
     ...defaultColOptions,
-    title: 'Calculated HP %',
+    title: 'Max %HP',
     field: 'calcHp',
-    render: ({ calcHp }) => `${toTwoDecimal(calcHp)} %`
+    hidden: false,
+    render: ({ calcHp }) => `${(calcHp)} %`,
+    customSort: (a, b) => a.calcHp - b.calcHp,
   },
   {
     ...defaultColOptions,
@@ -152,6 +159,7 @@ const columns = [
       genjutsu: "Genjutsu",
       healing: "Healing",
     },
+    hidden: false,
     render: ({ expert }) => StringUtil.toTitleCase(expert),
   },
   {
@@ -160,7 +168,6 @@ const columns = [
     field: 'weapon',
     emptyValue: '-',
     render: ({ weapon }) => StringUtil.toTitleCase(weapon),
-    hidden: true
   }
 ];
 

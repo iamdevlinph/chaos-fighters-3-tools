@@ -25,6 +25,7 @@ export default () => (
       <AppRoute exact path="/fighters" layout={MainLayout} container={loadableCons.FightersPage} />
       <AppRoute exact path="/tower" layout={MainLayout} container={loadableCons.TowerPage} />
       <AppRoute exact path="/glossary" layout={MainLayout} container={loadableCons.GlossaryPage} />
+      <AppRoute exact path="/*" layout={MainLayout} container={loadableCons.NotFound} />
     </Switch>
   </HashRouter>
 );
