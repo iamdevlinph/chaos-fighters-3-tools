@@ -55,35 +55,35 @@
     "term": "ACC",
     "description": [
       "Accuracy or HIT",
-      "Ignores EVA"
+      "Counters EVA"
     ]
   },
   {
     "term": "EVA",
     "description": [
       "Evasion",
-      "Ignores ACC"
+      "Counters ACC"
     ]
   },
   {
     "term": "BRK",
     "description": [
       "Break",
-      "Ignores DEF"
+      "Counters DEF"
     ]
   },
   {
     "term": "DEF",
     "description": [
       "Deference",
-      "Ignores BRK"
+      "Counters BRK"
     ]
   },
   {
     "term": "CRT",
     "description": [
       "Critical",
-      "Ignores RES",
+      "Counters RES",
       "Damage multiplier"
     ]
   },
@@ -91,7 +91,7 @@
     "term": "RES",
     "description": [
       "Resilience",
-      "Ignores CRT"
+      "Counters CRT"
     ]
   }
 ]

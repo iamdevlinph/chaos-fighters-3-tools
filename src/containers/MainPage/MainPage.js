@@ -14,6 +14,10 @@ export default () => {
         <li><NavLink to="/tower">Demon Tower</NavLink></li>
         <li><NavLink to="/glossary">Glossary</NavLink></li>
       </ul>
+
+      <strong>Recruitment Code: 1000351510</strong><br />
+      <strong>IGN: DevBT</strong><br />
+      <strong>Server: S019</strong><br />
     </>
   )
 };

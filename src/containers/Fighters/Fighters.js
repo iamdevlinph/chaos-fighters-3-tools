@@ -3,7 +3,7 @@ import MaterialTable from 'material-table'
 import styled from 'styled-components';
 import { columns, makeData, tableOptions } from './utils';
 import _ from 'lodash';
-import { StringUtil } from 'common-utils-pkg';
+import { StringUtil, StorageUtil } from 'common-utils-pkg';
 import FighterDetails from './FighterDetails';
 import DisplaySwitch from './DisplaySwitch';
 
@@ -16,9 +16,10 @@ const getLowestValue = (array, field) => Math.min.apply(Math, array.map((o) => o
 class FightersPage extends Component {
   constructor() {
     super();
+    const rememberDisplayType = StorageUtil.getItem('displayType') || 'text';
     this.state = {
       level: 30,
-      displayType: 'text'
+      displayType: rememberDisplayType
     }
     this.displayChange = this.displayChange.bind(this);
   }
@@ -30,14 +31,13 @@ class FightersPage extends Component {
   displayChange(val) {
     this.setState({
       displayType: val
-    })
+    });
+    StorageUtil.setItem('displayType', val)
   }
   render() {
     const { level, displayType } = this.state;
     const calculatedDataTable = makeData(fighterslist, level, 'table');
     const calculatedDataText = makeData(fighterslist, level, 'text');
-    console.log(calculatedDataText);
-    console.log(calculatedDataTable);
     const highestStats = {
       str: getHighestValue(calculatedDataTable, 'str'),
       agi: getHighestValue(calculatedDataTable, 'agi'),
@@ -59,7 +59,6 @@ class FightersPage extends Component {
       calcSpd: getHighestValue(calculatedDataTable, 'calcSpd'),
       calcHp: getHighestValue(calculatedDataTable, 'calcHp'),
     }
-    console.log(highestStats);
     const tableTitle = 'Fighter Stats'
     return (
       <>
