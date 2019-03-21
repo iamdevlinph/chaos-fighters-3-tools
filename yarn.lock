@@ -2609,10 +2609,10 @@ common-tags@^1.4.0:
   resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
   integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
 
-common-utils-pkg@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/common-utils-pkg/-/common-utils-pkg-2.0.4.tgz#5181c854a6b270f24e29c356ef7f1945b7d4dc1d"
-  integrity sha512-KWZH2IH5aOoAEet28Sro1CaZVnFkuTpzI7rsSqjkjKoPRmqM2pfQAc7n62rTneM/yNRuAuNVMD8X83hyji/Z1A==
+common-utils-pkg@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/common-utils-pkg/-/common-utils-pkg-2.0.5.tgz#1f1670689414a74a303cfd6d592b80a9e2a81053"
+  integrity sha512-3ncvazAn5C9Gc0BC8tTKp5HKKJArCHcuDaL/95+K9whQ8Wzsh+RFIFYx6QVyUOQnJDSrBSzIiKWJjeHM2O1Gyg==
   dependencies:
     lz-string "1.4.4"
 
