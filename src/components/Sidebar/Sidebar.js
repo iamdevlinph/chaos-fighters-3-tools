@@ -44,6 +44,9 @@ const SidebarHeader = styled.div`
   margin-bottom: 5px;
   a {
     color: white;
+    margin: -10px;
+    padding: 10px;
+    display: inline-block;
   }
 `;
 const SidebarOptionsArea = styled.div`
