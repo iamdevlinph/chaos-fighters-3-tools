@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/chaos-fighters-3-tools/static/js/0.7c3672a0.chunk.js"
   },
   {
-    "revision": "c543cdb15308a3fc4d57",
-    "url": "/chaos-fighters-3-tools/static/js/main.5d6da802.chunk.js"
+    "revision": "4803f4b2d520414a4c17",
+    "url": "/chaos-fighters-3-tools/static/js/main.0c428ea0.chunk.js"
   },
   {
     "revision": "637315e71cd3637d5175",
@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "/chaos-fighters-3-tools/static/js/8.851d9e09.chunk.js"
   },
   {
-    "revision": "c543cdb15308a3fc4d57",
+    "revision": "4803f4b2d520414a4c17",
     "url": "/chaos-fighters-3-tools/static/css/main.d039206b.chunk.css"
   },
   {
-    "revision": "34a35aa8627861a5decd68e6e4c5536b",
+    "revision": "b327132cb2ab3964a7436a4eb59a7b0c",
     "url": "/chaos-fighters-3-tools/index.html"
   }
 ];
