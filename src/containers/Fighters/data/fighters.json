@@ -1163,6 +1163,24 @@
     "weapon": "heavy arm"
   },
   {
+    "name": "Lv Bu",
+    "type": "epic",
+    "typeId": 3,
+    "str": 30,
+    "strGrowth": 12.8,
+    "strBmv": 9,
+    "agi": 22,
+    "agiGrowth": 9.6,
+    "agiBmv": 20,
+    "agiSpdPer": 20,
+    "agiEvaPer": 20,
+    "end": 23,
+    "endGrowth": 9.6,
+    "endBmv": 13,
+    "expert": "genjutsu",
+    "weapon": "spear"
+  },
+  {
     "__ignore": true,
     "name": "",
     "type": "",
