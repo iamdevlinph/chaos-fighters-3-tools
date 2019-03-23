@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
     font-size: 24px;
     margin-bottom: 20px;
   }
+  .underline {
+    text-decoration: underline;
+  }
 `;
 
 export default GlobalStyle;
