@@ -25,7 +25,7 @@ const DisplaySwitch = props => {
         type="compare"
         onClick={() => onClick('compare')}
       >
-        <i className="fas fa-search" /> Compare {compareCtr}
+        <i className="fas fa-search" /> Compare ({compareCtr})
       </DisplayOption>
     </>
   );
