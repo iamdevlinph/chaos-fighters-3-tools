@@ -154,6 +154,12 @@ class FightersPage extends Component {
                 data={comparedData}
                 title={tableTitle}
                 options={tableOptions(calculatedDataTable.length)}
+                localization={{
+                  body: {
+                    emptyDataSourceMessage:
+                      'Please add fighters from the table section',
+                  },
+                }}
               />
             )}
           </ContentArea>
