@@ -4,17 +4,17 @@ import { StringUtil } from 'common-utils-pkg';
 const cellStyle = {
   whiteSpace: 'nowrap',
   padding: '0 10px',
-}
+};
 const headerStyle = {
   padding: '0px 10px',
-  textAlign: 'center'
-}
+  textAlign: 'center',
+};
 const defaultColOptions = {
   filtering: false,
   cellStyle,
   headerStyle,
-  hidden: true
-}
+  hidden: true,
+};
 const columns = [
   {
     ...defaultColOptions,
@@ -31,7 +31,7 @@ const columns = [
       ordinary: 'Ordinary',
       rare: 'Rare',
       epic: 'Epic',
-      legendary: 'Legendary'
+      legendary: 'Legendary',
     },
     hidden: false,
     render: ({ type }) => StringUtil.toTitleCase(type),
@@ -92,7 +92,7 @@ const columns = [
     title: 'Max STR',
     field: 'calcStr',
     hidden: false,
-    render: ({ calcStr }) => (calcStr),
+    render: ({ calcStr }) => calcStr,
     customSort: (a, b) => a.calcStr - b.calcStr,
   },
   {
@@ -100,7 +100,7 @@ const columns = [
     title: 'Max %ATK',
     field: 'calcAtk',
     hidden: false,
-    render: ({ calcAtk }) => `${(calcAtk)} %`,
+    render: ({ calcAtk }) => `${calcAtk} %`,
     customSort: (a, b) => a.calcAtk - b.calcAtk,
   },
   {
@@ -108,7 +108,7 @@ const columns = [
     title: 'Max AGI',
     field: 'calcAgi',
     hidden: false,
-    render: ({ calcAgi }) => (calcAgi),
+    render: ({ calcAgi }) => calcAgi,
     customSort: (a, b) => a.calcAgi - b.calcAgi,
   },
   {
@@ -116,7 +116,7 @@ const columns = [
     title: 'Max SPD/EVA',
     field: 'calcSpd',
     hidden: false,
-    render: ({ calcSpd }) => (calcSpd),
+    render: ({ calcSpd }) => calcSpd,
     customSort: (a, b) => a.calcSpd - b.calcSpd,
   },
   // {
@@ -131,7 +131,7 @@ const columns = [
     title: 'Max END',
     field: 'calcEnd',
     hidden: false,
-    render: ({ calcEnd }) => (calcEnd),
+    render: ({ calcEnd }) => calcEnd,
     customSort: (a, b) => a.calcEnd - b.calcEnd,
   },
   {
@@ -139,7 +139,7 @@ const columns = [
     title: 'Max %HP',
     field: 'calcHp',
     hidden: false,
-    render: ({ calcHp }) => `${(calcHp)} %`,
+    render: ({ calcHp }) => `${calcHp} %`,
     customSort: (a, b) => a.calcHp - b.calcHp,
   },
   {
@@ -149,15 +149,15 @@ const columns = [
     filtering: true,
     lookup: {
       water: 'Water',
-      fire: "Fire",
-      earth: "Earth",
-      thunder: "Thunder",
-      wind: "Wind",
-      taijutsu: "Taijutsu",
-      ninjutsu: "Ninjutsu",
-      fuinutsu: "Fuinutsu",
-      genjutsu: "Genjutsu",
-      healing: "Healing",
+      fire: 'Fire',
+      earth: 'Earth',
+      thunder: 'Thunder',
+      wind: 'Wind',
+      taijutsu: 'Taijutsu',
+      ninjutsu: 'Ninjutsu',
+      fuinutsu: 'Fuinutsu',
+      genjutsu: 'Genjutsu',
+      healing: 'Healing',
     },
     hidden: false,
     render: ({ expert }) => StringUtil.toTitleCase(expert),
@@ -168,7 +168,7 @@ const columns = [
     field: 'weapon',
     emptyValue: '-',
     render: ({ weapon }) => StringUtil.toTitleCase(weapon),
-  }
+  },
 ];
 
 export default columns;

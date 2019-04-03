@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import MaterialTable from 'material-table'
+import MaterialTable from 'material-table';
 import styled from 'styled-components';
-import { columns, makeData, tableOptions } from './utils';
 import _ from 'lodash';
 import { StringUtil, StorageUtil } from 'common-utils-pkg';
+import { columns, makeData, tableOptions, tableActions } from './utils';
 import FighterDetails from './FighterDetails';
 import DisplaySwitch from './DisplaySwitch';
 
 import fighterslist from './data/fighters.json';
 
-
-const getHighestValue = (array, field) => Math.max.apply(Math, array.map((o) => o[field]))
-const getLowestValue = (array, field) => Math.min.apply(Math, array.map((o) => o[field]))
+const getHighestValue = (array, field) => Math.max(...array.map(o => o[field]));
+const getLowestValue = (array, field) => Math.min(...array.map(o => o[field]));
 
 class FightersPage extends Component {
   constructor() {
@@ -19,25 +18,56 @@ class FightersPage extends Component {
     const rememberDisplayType = StorageUtil.getItem('displayType') || 'text';
     this.state = {
       level: 30,
-      displayType: rememberDisplayType
-    }
+      displayType: rememberDisplayType,
+      compareFighters: [],
+      compareFightersCtr: 0,
+    };
     this.displayChange = this.displayChange.bind(this);
+    this.addToCompare = this.addToCompare.bind(this);
   }
+
   levelChange(e) {
     this.setState({
-      level: e.currentTarget.value
-    })
+      level: e.currentTarget.value,
+    });
   }
+
   displayChange(val) {
     this.setState({
-      displayType: val
+      displayType: val,
     });
-    StorageUtil.setItem('displayType', val)
+    StorageUtil.setItem('displayType', val);
   }
+
+  addToCompare(name) {
+    const { compareFighters, compareFightersCtr } = this.state;
+    if (!compareFighters.includes(name)) {
+      this.setState({
+        compareFighters: [...compareFighters, name],
+        compareFightersCtr: compareFightersCtr + 1,
+      });
+    } else {
+      const myItems = compareFighters;
+      const newItems = myItems.filter(f => f !== name);
+      this.setState({
+        compareFighters: newItems,
+        compareFightersCtr: compareFightersCtr - 1,
+      });
+    }
+  }
+
   render() {
-    const { level, displayType } = this.state;
+    const getComparedData = (data, selected) =>
+      data.filter(f => selected.includes(f.name));
+    const {
+      level,
+      displayType,
+      compareFightersCtr,
+      compareFighters,
+    } = this.state;
     const calculatedDataTable = makeData(fighterslist, level, 'table');
     const calculatedDataText = makeData(fighterslist, level, 'text');
+    const comparedData = getComparedData(calculatedDataTable, compareFighters);
     const highestStats = {
       str: getHighestValue(calculatedDataTable, 'str'),
       agi: getHighestValue(calculatedDataTable, 'agi'),
@@ -58,8 +88,8 @@ class FightersPage extends Component {
       calcAtk: getHighestValue(calculatedDataTable, 'calcAtk'),
       calcSpd: getHighestValue(calculatedDataTable, 'calcSpd'),
       calcHp: getHighestValue(calculatedDataTable, 'calcHp'),
-    }
-    const tableTitle = 'Fighter Stats'
+    };
+    const tableTitle = 'Fighter Stats';
     return (
       <>
         <div className="page-title">Fighters</div>
@@ -67,41 +97,69 @@ class FightersPage extends Component {
           <Options>
             <FighterLevel>
               <label>Fighter Level </label>
-              <input type="number" value={level} onChange={(e) => this.levelChange(e)} />
+              <input
+                type="number"
+                value={level}
+                onChange={e => this.levelChange(e)}
+              />
             </FighterLevel>
             <DisplaySwitchArea>
-              <DisplaySwitch displayType={displayType} onClick={this.displayChange}></DisplaySwitch>
+              <DisplaySwitch
+                displayType={displayType}
+                onClick={this.displayChange}
+                compareCtr={compareFightersCtr}
+              />
             </DisplaySwitchArea>
           </Options>
           <ContentArea>
-            {displayType === 'text' ?
-              (
-                <TextDisplay>
-                  The colored stats are the BEST value for each type.
-                  {_.map(calculatedDataText, (val) =>
-                    (
-                      <div key={val[0]}>
-                        <FighterTypeText>{StringUtil.toSentenceCase(val[0])} Expert Fighters</FighterTypeText>
-                        {_.map(val[1], (fighter) => (
-                          <FighterDetails fighter={fighter} key={fighter.name} bestValues={highestStats}></FighterDetails>
-                        ))}
-                      </div>
-                    )
-                  )}
-                </TextDisplay>
-              ) :
-              (
-                <MaterialTable
-                  columns={columns}
-                  data={calculatedDataTable}
-                  title={tableTitle}
-                  options={tableOptions(calculatedDataTable.length)}
-                />
-              )}
+            {/* Text */}
+            {displayType === 'text' && (
+              <TextDisplay>
+                The colored stats are the BEST value for each type.
+                {_.map(calculatedDataText, val => (
+                  <div key={val[0]}>
+                    <FighterTypeText>
+                      {StringUtil.toSentenceCase(val[0])} Expert Fighters
+                    </FighterTypeText>
+                    {_.map(val[1], fighter => (
+                      <FighterDetails
+                        fighter={fighter}
+                        key={fighter.name}
+                        bestValues={highestStats}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </TextDisplay>
+            )}
+
+            {/* Table */}
+            {displayType === 'table' && (
+              <MaterialTable
+                columns={columns}
+                data={calculatedDataTable}
+                title={tableTitle}
+                options={tableOptions(calculatedDataTable.length)}
+                actions={tableActions({
+                  addFn: this.addToCompare,
+                  list: compareFighters,
+                })}
+              />
+            )}
+
+            {/* Compare */}
+            {displayType === 'compare' && (
+              <MaterialTable
+                columns={columns}
+                data={comparedData}
+                title={tableTitle}
+                options={tableOptions(calculatedDataTable.length)}
+              />
+            )}
           </ContentArea>
         </FightersContaine>
       </>
-    )
+    );
   }
 }
 
@@ -110,11 +168,11 @@ export default FightersPage;
 const FightersContaine = styled.div`
   display: grid;
   grid-template-areas:
-    "options"
-    "content";
+    'options'
+    'content';
   grid-template-rows:
-    "1fr"
-    "max-content";
+    '1fr'
+    'max-content';
 `;
 const FighterLevel = styled.div`
   grid-area: level;
@@ -131,14 +189,15 @@ const ContentArea = styled.div`
   grid-area: content;
 `;
 const TextDisplay = styled.div`
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   padding: 20px 24px;
-  background: #FFF;
+  background: #fff;
 `;
 const Options = styled.div`
   grid-area: options;
   display: grid;
-  grid-template-areas: "level switch";
+  grid-template-areas: 'level switch';
   grid-template-columns: repeat(2, max-content);
   column-gap: 10px;
 `;
