@@ -1,15 +1,18 @@
 const actions = ({ addFn, list }) => {
+  const added = (name) => {
+    return list.includes(name);
+  }
   return [
     rowData => ({
-      icon: 'library_add',
-      tooltip: 'Add to compare',
+      icon: added(rowData.name) ? 'remove_circle' : 'add_circle',
+      tooltip: added(rowData.name) ? 'Remove from compare' : 'Add to compare',
       onClick: () => {
         addFn(rowData.name);
       },
       iconProps: {
         style: {
           fontSize: 30,
-          color: list.includes(rowData.name) ? 'red' : '#FFF',
+          color: added(rowData.name) ? 'red' : '#FFF',
         },
       },
     }),

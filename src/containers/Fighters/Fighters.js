@@ -160,6 +160,10 @@ class FightersPage extends Component {
                       'Please add fighters from the table section',
                   },
                 }}
+                actions={tableActions({
+                  addFn: this.addToCompare,
+                  list: compareFighters,
+                })}
               />
             )}
           </ContentArea>

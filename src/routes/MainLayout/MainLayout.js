@@ -19,10 +19,18 @@ const MainLayout = styled.div`
   display: grid;
   grid-template-columns: 185px 1fr;
   grid-template-areas: "sidebar content";
+
+  @media only screen and (max-width: 950px) {
+    grid-template-columns: 0 1fr;
+  }
 `;
 const SidebarArea = styled.div`
   grid-area: sidebar;
   position: fixed;
+
+  @media only screen and (max-width: 950px) {
+    z-index: 2;
+  }
 `;
 const ContentArea = styled.div`
   grid-area: content;
