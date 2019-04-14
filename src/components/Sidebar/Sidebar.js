@@ -109,11 +109,12 @@ const ToggleSideBar = styled.div`
     color: #007cff;
     i {
       font-size: 28px;
+      position: absolute;
       &.fa-times {
-        margin-left: 185px;
+        left: 185px;
       }
       &.fa-bars {
-        margin-left: 5px;
+        left: 5px;
       }
     }
   }
