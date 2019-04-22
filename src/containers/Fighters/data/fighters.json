@@ -1,4 +1,5 @@
-[{
+[
+  {
     "__ignore": true,
     "name": "",
     "type": "",
@@ -1180,6 +1181,25 @@
     "expert": "genjutsu",
     "weapon": "spear"
   },
+  {
+    "__ignore": true,
+    "name": "Wanderer",
+    "type": "legendary",
+    "typeId": 4,
+    "str": 0,
+    "strGrowth": 0,
+    "strBmv": 17,
+    "agi": 0,
+    "agiGrowth": 0,
+    "agiBmv": 8,
+    "agiSpdPer": 0,
+    "agiEvaPer": 0,
+    "end": 0,
+    "endGrowth": 0,
+    "endBmv": 12,
+    "expert": "thunder",
+    "weapon": "sword"
+  }
   {
     "__ignore": true,
     "name": "",
