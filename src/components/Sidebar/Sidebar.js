@@ -15,9 +15,9 @@ class SidebarComponent extends Component {
       shown: false
     }
   }
-  showHideSidebar() {
+  showHideSidebar(forceHide) {
     this.setState({
-      shown: !this.state.shown
+      shown: forceHide ? !forceHide : !this.state.shown
     })
   }
   render() {
@@ -25,13 +25,15 @@ class SidebarComponent extends Component {
       return (
         <Link key={val}>
           <NavLink to={`/${val}`}
-            activeClassName="active-route">{val}</NavLink>
+            activeClassName="active-route"
+            onClick={() => this.showHideSidebar(true)}>{val}</NavLink>
         </Link>
       )
     })
     const { shown } = this.state;
     return (
       <>
+        {shown && (<SidebarBG onClick={() => this.showHideSidebar(true)}></SidebarBG>)}
         <ToggleSideBar className="toggle">
           {shown ?
             (
@@ -45,7 +47,8 @@ class SidebarComponent extends Component {
         </ToggleSideBar>
         <Sidebar shown={shown}>
           <SidebarHeader>
-            <NavLink to="/">Chaos Fighters 3</NavLink>
+            <NavLink to="/"
+            onClick={() => this.showHideSidebar(true)}>Chaos Fighters 3</NavLink>
           </SidebarHeader>
           <SidebarOptionsArea>
             {sidebarOptions}
@@ -62,7 +65,8 @@ const Sidebar = styled.div`
   white-space: nowrap;
   min-height: 100vh;
   height: 100%;
-  background: #d4d4d4;
+  background: #fff;
+  z-index: 2;
 
   @media only screen and (max-width: 950px) {
     display: ${({ shown }) => shown ? 'block' : 'none'};
@@ -94,13 +98,15 @@ const Link = styled.div`
     color: black;
     /* color: white; */
     &.active-route {
-      background: white;
+      background: #353535;
       font-weight: bold;
+      color: white;
     }
   }
 `;
 const ToggleSideBar = styled.div`
   display: none;
+  z-index: 2;
   @media only screen and (max-width: 950px) {
     position: absolute;
     display: block;
@@ -118,4 +124,12 @@ const ToggleSideBar = styled.div`
       }
     }
   }
+`;
+const SidebarBG = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  opacity: 0.3;
+  position: absolute;
+  z-index: -11;
 `;
