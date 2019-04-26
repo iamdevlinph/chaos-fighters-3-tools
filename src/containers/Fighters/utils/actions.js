@@ -1,7 +1,7 @@
 const actions = ({ addFn, list }) => {
-  const added = (name) => {
+  const added = name => {
     return list.includes(name);
-  }
+  };
   return [
     rowData => ({
       icon: added(rowData.name) ? 'remove_circle' : 'add_circle',

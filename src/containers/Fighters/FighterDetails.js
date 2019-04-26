@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const isHighest = (val, fieldToCheck, bestValues) => (
-  +val === bestValues[fieldToCheck] ?
-    <HighestValueCell>{val}</HighestValueCell> :
+const isHighest = (val, fieldToCheck, bestValues) =>
+  +val === bestValues[fieldToCheck] ? (
+    <HighestValueCell>{val}</HighestValueCell>
+  ) : (
     <span>{val}</span>
-)
+  );
 
-const FighterDetailsComponent = (props) => {
+const FighterDetailsComponent = props => {
   const { fighter, bestValues } = props;
   return (
     <FighterDetails>
-      <FighterName id={fighter.name} color={fighter.typeColor}>{fighter.name}</FighterName>
+      <FighterName id={fighter.name} color={fighter.typeColor}>
+        {fighter.name}
+      </FighterName>
       <FighterStats>
         {/* <div>
           ISV: {`STR ${fighter.str} AGI ${fighter.agi} END ${fighter.end}`}
@@ -74,7 +78,11 @@ const FighterDetailsComponent = (props) => {
               <td>MAX</td>
               <td>ATK</td>
               <td>{isHighest(fighter.calcAtk, 'calcAtk', bestValues)} %</td>
-              <td>SPD<br />EVA</td>
+              <td>
+                SPD
+                <br />
+                EVA
+              </td>
               <td>{isHighest(fighter.calcSpd, 'calcSpd', bestValues)}</td>
               <td>HP</td>
               <td>{isHighest(fighter.calcHp, 'calcHp', bestValues)} %</td>
@@ -87,6 +95,11 @@ const FighterDetailsComponent = (props) => {
 };
 
 export default FighterDetailsComponent;
+
+FighterDetailsComponent.propTypes = {
+  fighter: PropTypes.object.isRequired,
+  bestValues: PropTypes.object.isRequired,
+};
 
 const FighterName = styled.div`
   font-weight: bold;

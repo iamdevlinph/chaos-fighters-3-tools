@@ -10,18 +10,29 @@ export default () => {
 
       <h5>Contents</h5>
       <ul>
-        <li><NavLink to="/fighters">Fighters</NavLink></li>
-        <li><NavLink to="/tower">Demon Tower</NavLink></li>
-        <li><NavLink to="/glossary">Glossary</NavLink></li>
+        <li>
+          <NavLink to="/fighters">Fighters</NavLink>
+        </li>
+        <li>
+          <NavLink to="/tower">Demon Tower</NavLink>
+        </li>
+        <li>
+          <NavLink to="/glossary">Glossary</NavLink>
+        </li>
       </ul>
 
-      <strong>Recruitment Code: 1000351510</strong><br />
-      <strong>IGN: DevBT</strong><br />
-      <strong>Server: S019</strong><br />
+      <strong>Recruitment Code: 1000351510</strong>
+      <br />
+      <strong>IGN: DevBT</strong>
+      <br />
+      <strong>Server: S019</strong>
+      <br />
 
       <br />
       <br />
-      <a href="https://github.com/iamdevlinph/chaos-fighters-3-tools">Source Code</a>
+      <a href="https://github.com/iamdevlinph/chaos-fighters-3-tools">
+        Source Code
+      </a>
     </>
-  )
+  );
 };

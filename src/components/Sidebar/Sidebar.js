@@ -2,60 +2,66 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const urls = [
-  'fighters',
-  'tower',
-  'glossary'
-]
+const urls = ['fighters', 'tower', 'glossary'];
 
 class SidebarComponent extends Component {
   constructor() {
     super();
     this.state = {
-      shown: false
-    }
+      shown: false,
+    };
   }
+
   showHideSidebar(forceHide) {
+    const { shown } = this.state;
     this.setState({
-      shown: forceHide ? !forceHide : !this.state.shown
-    })
+      shown: forceHide ? !forceHide : !shown,
+    });
   }
+
   render() {
-    const sidebarOptions = urls.map((val) => {
+    const sidebarOptions = urls.map(val => {
       return (
         <Link key={val}>
-          <NavLink to={`/${val}`}
+          <NavLink
+            to={`/${val}`}
             activeClassName="active-route"
-            onClick={() => this.showHideSidebar(true)}>{val}</NavLink>
+            onClick={() => this.showHideSidebar(true)}
+          >
+            {val}
+          </NavLink>
         </Link>
-      )
-    })
+      );
+    });
     const { shown } = this.state;
     return (
       <>
-        {shown && (<SidebarBG onClick={() => this.showHideSidebar(true)}></SidebarBG>)}
+        {shown && <SidebarBG onClick={() => this.showHideSidebar(true)} />}
         <ToggleSideBar className="toggle">
-          {shown ?
-            (
-              <i className="fas fa-times" title="menu" onClick={() => this.showHideSidebar()}></i>
-            )
-            :
-            (
-              <i className="fas fa-bars" title="menu" onClick={() => this.showHideSidebar()}></i>
-            )
-          }
+          {shown ? (
+            <i
+              className="fas fa-times"
+              title="menu"
+              onClick={() => this.showHideSidebar()}
+            />
+          ) : (
+            <i
+              className="fas fa-bars"
+              title="menu"
+              onClick={() => this.showHideSidebar()}
+            />
+          )}
         </ToggleSideBar>
         <Sidebar shown={shown}>
           <SidebarHeader>
-            <NavLink to="/"
-            onClick={() => this.showHideSidebar(true)}>Chaos Fighters 3</NavLink>
+            <NavLink to="/" onClick={() => this.showHideSidebar(true)}>
+              Chaos Fighters 3
+            </NavLink>
           </SidebarHeader>
-          <SidebarOptionsArea>
-            {sidebarOptions}
-          </SidebarOptionsArea>
+          <SidebarOptionsArea>{sidebarOptions}</SidebarOptionsArea>
         </Sidebar>
       </>
-    )
+    );
   }
 }
 
@@ -69,16 +75,18 @@ const Sidebar = styled.div`
   z-index: 2;
 
   @media only screen and (max-width: 950px) {
-    display: ${({ shown }) => shown ? 'block' : 'none'};
-    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+    display: ${({ shown }) => (shown ? 'block' : 'none')};
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   }
 `;
 const SidebarHeader = styled.div`
-  background: #FF4D00;
+  background: #ff4d00;
   font-weight: bold;
   font-size: 20px;
   padding: 10px 15px;
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   margin-bottom: 5px;
   a {
     color: white;

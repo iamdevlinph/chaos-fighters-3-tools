@@ -1,24 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { Sidebar } from '../../components';
 
-export default (props) => {
+const MainLayout = props => {
+  const { children } = props;
   return (
-    <MainLayout>
+    <MainLayoutArea>
       <SidebarArea>
-        <Sidebar></Sidebar>
+        <Sidebar />
       </SidebarArea>
-      <ContentArea>
-        {props.children}
-      </ContentArea>
-    </MainLayout>
-  )
-}
+      <ContentArea>{children}</ContentArea>
+    </MainLayoutArea>
+  );
+};
 
-const MainLayout = styled.div`
+export default MainLayout;
+
+MainLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+const MainLayoutArea = styled.div`
   display: grid;
   grid-template-columns: 185px 1fr;
-  grid-template-areas: "sidebar content";
+  grid-template-areas: 'sidebar content';
 
   @media only screen and (max-width: 950px) {
     grid-template-columns: 0 1fr;
@@ -34,7 +40,7 @@ const SidebarArea = styled.div`
 `;
 const ContentArea = styled.div`
   grid-area: content;
-  box-shadow: inset 4px 0px 18px -5px rgba(0,0,0,0.75);
+  box-shadow: inset 4px 0px 18px -5px rgba(0, 0, 0, 0.75);
   padding: 20px;
   /* height: 100vh; */
   overflow: auto;

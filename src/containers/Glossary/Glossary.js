@@ -2,17 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
 
-import glossaryList from './data/glossary.json'
+import glossaryList from './data/glossary.json';
 
 const Glossary = () => {
-  const glossary = _.map(glossaryList, (val) => {
+  const glossary = _.map(glossaryList, val => {
     return (
       <GlossaryEntry key={val.term}>
         <Term>{val.term}</Term>
-        {_.map(val.description, (description) => (<Desc key={description}>- {description}</Desc>))}
+        {_.map(val.description, description => (
+          <Desc key={description}>- {description}</Desc>
+        ))}
       </GlossaryEntry>
-    )
-  })
+    );
+  });
   return (
     <div>
       <div className="page-title">Chaos Fighters 3 Glossary</div>
