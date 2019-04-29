@@ -1,23 +1,23 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import MainStat from './MainSats';
 
 const StatSimulatorPage = () => {
   const title = 'Stat Simulator';
+  const tabTitles = ['Main Stats'];
+  const tabs = tabTitles.map(val => {
+    return <Tab key={val}>{val}</Tab>;
+  });
   return (
     <div>
       <div className="page-title">{title}</div>
+      <p>Work in progress. Not sure how long this would take.</p>
       <Tabs>
-        <TabList>
-          <Tab>Title 1</Tab>
-          <Tab>Title 2</Tab>
-        </TabList>
+        <TabList>{tabs}</TabList>
 
         <TabPanel>
-          <h2>Any content 1</h2>
-        </TabPanel>
-        <TabPanel>
-          <h2>Any content 2</h2>
+          <MainStat />
         </TabPanel>
       </Tabs>
     </div>
