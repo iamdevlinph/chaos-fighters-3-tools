@@ -3,29 +3,26 @@ import styled from 'styled-components';
 
 const MainStat = () => {
   return (
-    <>
-      <div>Main Stats Tab</div>
-      <Main>
-        <span>HP</span>
-        <span>SP</span>
+    <Main>
+      <span>HP</span>
+      <span>SP</span>
 
-        <span>Weapon</span>
-        <span>STR</span>
+      <span>Weapon</span>
+      <span>STR</span>
 
-        <span>ATK</span>
-        <span>AGI</span>
+      <span>ATK</span>
+      <span>AGI</span>
 
-        <span>SPD</span>
-        <span>END</span>
+      <span>SPD</span>
+      <span>END</span>
 
-        <span>ACC</span>
-        <span>EVA</span>
-        <span>BRK</span>
-        <span>DEF</span>
-        <span>CRT</span>
-        <span>RES</span>
-      </Main>
-    </>
+      <span>ACC</span>
+      <span>EVA</span>
+      <span>BRK</span>
+      <span>DEF</span>
+      <span>CRT</span>
+      <span>RES</span>
+    </Main>
   );
 };
 
