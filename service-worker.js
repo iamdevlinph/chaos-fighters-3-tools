@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chaos-fighters-3-tools/precache-manifest.cd8ab9d64b6f90f8062813e4108c0532.js"
+  "/chaos-fighters-3-tools/precache-manifest.90f4a5b7d69787fc048f11ce091c4ab8.js"
 );
 
 workbox.clientsClaim();
