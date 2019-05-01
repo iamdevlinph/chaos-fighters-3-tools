@@ -51,6 +51,7 @@ const columns = [
     ...defaultColOptions,
     title: 'BMV STR', // 1% ATK
     field: 'strBmv',
+    hidden: false,
   },
   {
     ...defaultColOptions,
@@ -66,6 +67,7 @@ const columns = [
     ...defaultColOptions,
     title: 'BMV AGI', // 1 SPD 1 EVA
     field: 'agiBmv',
+    hidden: false,
   },
   // {
   //   ...defaultColOptions,
@@ -86,6 +88,7 @@ const columns = [
     ...defaultColOptions,
     title: 'BMV END', // 1% HP
     field: 'endBmv',
+    hidden: false,
   },
   {
     ...defaultColOptions,
@@ -99,7 +102,6 @@ const columns = [
     ...defaultColOptions,
     title: 'Max %ATK',
     field: 'calcAtk',
-    hidden: false,
     render: ({ calcAtk }) => `${calcAtk} %`,
     customSort: (a, b) => a.calcAtk - b.calcAtk,
   },
@@ -115,7 +117,6 @@ const columns = [
     ...defaultColOptions,
     title: 'Max SPD/EVA',
     field: 'calcSpd',
-    hidden: false,
     render: ({ calcSpd }) => calcSpd,
     customSort: (a, b) => a.calcSpd - b.calcSpd,
   },
@@ -138,7 +139,6 @@ const columns = [
     ...defaultColOptions,
     title: 'Max %HP',
     field: 'calcHp',
-    hidden: false,
     render: ({ calcHp }) => `${calcHp} %`,
     customSort: (a, b) => a.calcHp - b.calcHp,
   },
