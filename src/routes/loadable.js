@@ -19,6 +19,10 @@ export default {
     loader: () => import('../containers/Glossary/Glossary'),
     loading: Loading,
   }),
+  VipPage: Loadable({
+    loader: () => import('../containers/Vip/Vip'),
+    loading: Loading,
+  }),
   NotFound: Loadable({
     loader: () => import('../containers/NotFound/NotFound'),
     loading: Loading,
