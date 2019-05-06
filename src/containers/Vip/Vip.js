@@ -42,13 +42,22 @@ class VipPage extends Component {
 
   render() {
     const { currency, conversion } = this.state;
-    const allCurrencies = _.map(currenctList, cur => {
-      return (
-        <option value={cur.id} key={cur.id}>
-          {`${cur.id} (${cur.currencyName})`}
-        </option>
-      );
-    });
+    // const allCurrencies = _.map(currenctList, cur => {
+    //   return (
+    //     <option value={cur.id} key={cur.id}>
+    //       {`${cur.id} (${cur.currencyName})`}
+    //     </option>
+    //   );
+    // });
+    const allCurrencies = _.orderBy(currenctList, [cur => cur.id], ['asc']).map(
+      cur => {
+        return (
+          <option value={cur.id} key={cur.id}>
+            {`${cur.id} (${cur.currencyName})`}
+          </option>
+        );
+      }
+    );
     return (
       <>
         <div className="page-title">VIP Levels</div>
