@@ -63,8 +63,9 @@ class VipPage extends Component {
         <div className="page-title">VIP Levels</div>
         <p>Note: 60 VIP Score = 1 USD</p>
         <p>
-          This calculation does not include tax. So it might change depending on
-          your payment method.
+          Note: This calculation might vary from the actual price because of the
+          source of conversion. This calculation does not include tax. So it
+          might change depending on your payment method.
         </p>
         <div>
           <span>Currency </span>
