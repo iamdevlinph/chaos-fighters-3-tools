@@ -3,15 +3,19 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import _ from 'lodash';
+import { StorageUtil } from 'common-utils-pkg';
 
 import currenctList from './currency.json';
 
 class VipPage extends Component {
   constructor() {
     super();
-    this.state = {
+    const savedOptions = StorageUtil.getItem('options') || {
       currency: 'USD',
       conversion: 1,
+    };
+    this.state = {
+      ...savedOptions,
     };
   }
 
@@ -26,9 +30,11 @@ class VipPage extends Component {
     )
       .then(response => response.json())
       .then(data => {
+        const conversion = data[Object.keys(data)[0]].val;
         this.setState({
-          conversion: data[Object.keys(data)[0]].val,
+          conversion,
         });
+        StorageUtil.setItem('options', { currency, conversion });
       })
       .catch(error => console.error(error));
   };
@@ -71,7 +77,7 @@ class VipPage extends Component {
           <span>Currency </span>
           <CurrencyDropdown
             onChange={this.onCoversionChange}
-            defaultValue="USD"
+            defaultValue={currency}
           >
             {allCurrencies}
           </CurrencyDropdown>
