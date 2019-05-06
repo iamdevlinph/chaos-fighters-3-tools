@@ -45,6 +45,12 @@ export default () => (
       />
       <AppRoute
         exact
+        path="/stat-simulator"
+        layout={MainLayout}
+        container={loadableCons.StatSimulatorPage}
+      />
+      <AppRoute
+        exact
         path="/vip"
         layout={MainLayout}
         container={loadableCons.VipPage}

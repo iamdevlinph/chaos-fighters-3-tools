@@ -19,11 +19,14 @@ export default () => {
         <li>
           <NavLink to="/glossary">Glossary</NavLink>
         </li>
+        <li>
+          <NavLink to="/stat-simulator">Stat Simulator</NavLink>
+        </li>
       </ul>
 
       <strong>Recruitment Code: 1000351510</strong>
       <br />
-      <strong>IGN: DevBT</strong>
+      <strong>IGN: DevBTツ</strong>
       <br />
       <strong>Server: S019</strong>
       <br />

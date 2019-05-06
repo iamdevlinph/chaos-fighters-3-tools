@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const urls = ['fighters', 'tower', 'glossary', 'vip'];
+const urls = ['fighters', 'tower', 'glossary', 'stat-simulator', 'vip'];
 
 class SidebarComponent extends Component {
   constructor() {
@@ -21,6 +21,7 @@ class SidebarComponent extends Component {
 
   render() {
     const sidebarOptions = urls.map(val => {
+      const label = val.replace('-', ' ');
       return (
         <Link key={val}>
           <NavLink
@@ -28,7 +29,7 @@ class SidebarComponent extends Component {
             activeClassName="active-route"
             onClick={() => this.showHideSidebar(true)}
           >
-            {val}
+            {label}
           </NavLink>
         </Link>
       );

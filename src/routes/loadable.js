@@ -19,6 +19,10 @@ export default {
     loader: () => import('../containers/Glossary/Glossary'),
     loading: Loading,
   }),
+  StatSimulatorPage: Loadable({
+    loader: () => import('../containers/StatSimulator/StatSimulator'),
+    loading: Loading,
+  }),
   VipPage: Loadable({
     loader: () => import('../containers/Vip/Vip'),
     loading: Loading,
