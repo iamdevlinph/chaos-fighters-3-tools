@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  HashRouter, Route, Switch,
-} from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import MainLayout from './MainLayout/MainLayout';
@@ -21,11 +19,42 @@ const AppRoute = ({ container: Container, layout: Layout, ...rest }) => (
 export default () => (
   <HashRouter>
     <Switch>
-      <AppRoute exact path="/" layout={MainLayout} container={loadableCons.MainPage} />
-      <AppRoute exact path="/fighters" layout={MainLayout} container={loadableCons.FightersPage} />
-      <AppRoute exact path="/tower" layout={MainLayout} container={loadableCons.TowerPage} />
-      <AppRoute exact path="/glossary" layout={MainLayout} container={loadableCons.GlossaryPage} />
-      <AppRoute exact path="/*" layout={MainLayout} container={loadableCons.NotFound} />
+      <AppRoute
+        exact
+        path="/"
+        layout={MainLayout}
+        container={loadableCons.MainPage}
+      />
+      <AppRoute
+        exact
+        path="/fighters"
+        layout={MainLayout}
+        container={loadableCons.FightersPage}
+      />
+      <AppRoute
+        exact
+        path="/tower"
+        layout={MainLayout}
+        container={loadableCons.TowerPage}
+      />
+      <AppRoute
+        exact
+        path="/glossary"
+        layout={MainLayout}
+        container={loadableCons.GlossaryPage}
+      />
+      <AppRoute
+        exact
+        path="/vip"
+        layout={MainLayout}
+        container={loadableCons.VipPage}
+      />
+      <AppRoute
+        exact
+        path="/*"
+        layout={MainLayout}
+        container={loadableCons.NotFound}
+      />
     </Switch>
   </HashRouter>
 );
