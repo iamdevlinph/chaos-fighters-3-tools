@@ -51,6 +51,12 @@ export default () => (
       />
       <AppRoute
         exact
+        path="/vip"
+        layout={MainLayout}
+        container={loadableCons.VipPage}
+      />
+      <AppRoute
+        exact
         path="/*"
         layout={MainLayout}
         container={loadableCons.NotFound}

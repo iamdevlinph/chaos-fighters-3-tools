@@ -23,6 +23,10 @@ export default {
     loader: () => import('../containers/StatSimulator/StatSimulator'),
     loading: Loading,
   }),
+  VipPage: Loadable({
+    loader: () => import('../containers/Vip/Vip'),
+    loading: Loading,
+  }),
   NotFound: Loadable({
     loader: () => import('../containers/NotFound/NotFound'),
     loading: Loading,
