@@ -94,7 +94,7 @@ class VipPage extends Component {
           <thead>
             <tr>
               <th>VIP Level</th>
-              <th>VIP Score</th>
+              <th>VIP Score (Diamonds)</th>
               <th>
                 Amount
                 <br />({currency})
