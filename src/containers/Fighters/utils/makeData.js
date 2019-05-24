@@ -9,18 +9,18 @@ const typeColors = {
 
 const createObj = (val, level) => {
   const newLevel = level == 1 ? level - 1 : level;
-  const calcStr = (val.str + val.strGrowth * newLevel).toFixed();
-  const calcAgi = (val.agi + val.agiGrowth * newLevel).toFixed();
-  const calcEnd = (val.end + val.endGrowth * newLevel).toFixed();
+  const calcStr = Math.ceil(val.str + val.strGrowth * newLevel);
+  const calcAgi = Math.ceil(val.agi + val.agiGrowth * newLevel);
+  const calcEnd = Math.ceil(val.end + val.endGrowth * newLevel);
   return {
     ...val,
     calcStr,
-    calcAtk: (calcStr / val.strBmv).toFixed(),
+    calcAtk: Math.ceil(calcStr / val.strBmv),
     calcAgi,
-    calcSpd: (calcAgi / val.agiBmv).toFixed(),
-    calcEva: (calcAgi / val.agiEvaPer).toFixed(),
+    calcSpd: Math.ceil(calcAgi / val.agiBmv),
+    calcEva: Math.ceil(calcAgi / val.agiEvaPer),
     calcEnd,
-    calcHp: (calcEnd / val.endBmv).toFixed(),
+    calcHp: Math.ceil(calcEnd / val.endBmv),
     typeColor: typeColors[val.type],
   };
 };

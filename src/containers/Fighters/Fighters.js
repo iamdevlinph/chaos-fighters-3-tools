@@ -17,7 +17,7 @@ class FightersPage extends Component {
     super();
     const rememberDisplayType = StorageUtil.getItem('displayType') || 'text';
     this.state = {
-      level: 30,
+      level: 27,
       displayType: rememberDisplayType,
       compareFighters: [],
       compareFightersCtr: 0,

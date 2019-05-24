@@ -19,6 +19,9 @@ export default () => {
         <li>
           <NavLink to="/glossary">Glossary</NavLink>
         </li>
+        <li>
+          <NavLink to="/vip">Vip Conversion</NavLink>
+        </li>
       </ul>
 
       <strong>Recruitment Code: 1000351510</strong>
