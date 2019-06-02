@@ -20,8 +20,7 @@ class VipPage extends Component {
   }
 
   calculateAmount = (vipScore, conversion) => {
-    const calc = (vipScore / 60) * conversion;
-    return calc.toLocaleString(undefined, { minimumFractionDigits: 2 });
+    return Math.ceil((vipScore / 60) * conversion);
   };
 
   getConversion = async currency => {
