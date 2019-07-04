@@ -1096,6 +1096,22 @@
     "weapon": "spear"
   },
   {
+    "name": "God of Speed",
+    "type": "legendary",
+    "typeId": 4,
+    "str": 31,
+    "strGrowth": 12.8,
+    "strBmv": 11,
+    "agi": 36,
+    "agiGrowth": 15.2,
+    "agiBmv": 8,
+    "end": 23,
+    "endGrowth": 12,
+    "endBmv": 16,
+    "expert": "thunder",
+    "weapon": "dagger"
+  },
+  {
     "__ignore": true,
     "name": "",
     "type": "",
