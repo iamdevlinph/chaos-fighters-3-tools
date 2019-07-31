@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const urls = ['fighters', 'tower', 'glossary', 'vip'];
+const urls = ['fighters', 'tower', 'glossary', 'vip', 'team'];
 
 class SidebarComponent extends Component {
   constructor() {
