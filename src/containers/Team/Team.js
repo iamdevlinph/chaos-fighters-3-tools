@@ -43,22 +43,49 @@ class Team extends Component {
       this.updateList();
     } else {
       // console.log('search', keywords);
-      const filteredData = teamData.filter(team => {
-        // console.log('team', team);
-        let show = false;
-        keywords.forEach(word => {
-          team.forEach((fighter, idx) => {
-            // console.log(word, fighter);
-            if (idx !== 0 && fighter.toLowerCase().includes(word)) {
-              show = true;
-            }
-          });
-        });
-        return show;
+      // const filteredData = teamData.filter(team => {
+      //   // console.log('team', team);
+      //   let show = false;
+      //   keywords.forEach(word => {
+      //     team.forEach((fighter, idx) => {
+      //       // console.log(word, fighter);
+      //       if (idx !== 0 && fighter.toLowerCase().includes(word)) {
+      //         show = true;
+      //         console.log(team);
+      //         console.log(fighter, word);
+      //       }
+      //     });
+      //   });
+      //   return show;
+      // });
+
+      teamData.forEach(team => {
+        // loop team data
+        // check if each team has all the keywords
+        // console.log(team, keywords);
+        this.teamHasKeywords(team, keywords);
       });
+
+      const filteredData = [];
 
       this.updateList(filteredData);
     }
+  };
+
+  teamHasKeywords = (team, keywords) => {
+    console.log(team, keywords);
+    // let matches = 0;
+    // team.forEach(fighter => {
+    //   // loop all fighters in a team
+    //   if (fighter)
+    // });
+    // team.filter(fighter => {
+    //   console.log(object)
+    //   return fighter.includes(keywords[0])
+    // });
+    // keywords.filter(word => {
+
+    // })
   };
 
   render() {
