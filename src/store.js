@@ -8,10 +8,7 @@ import mySaga from './sagaDucks/_sagas';
 const sagaMiddleware = createSagaMiddleware();
 
 // mount it on the Store
-export default createStore(
-  reducer,
-  applyMiddleware(sagaMiddleware),
-);
+export default createStore(reducer, applyMiddleware(sagaMiddleware));
 
 // then run the saga
 sagaMiddleware.run(mySaga);

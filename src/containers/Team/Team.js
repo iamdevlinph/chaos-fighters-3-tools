@@ -21,6 +21,7 @@ class Team extends Component {
     data.forEach((team, idx) => {
       teamList.push(
         <tr key={team[0]}>
+          <td>{team[0]}</td>
           <td>{team[1]}</td>
           <td>{team[2]}</td>
           <td>{team[3]}</td>
@@ -103,6 +104,7 @@ class Team extends Component {
         <TeamTable>
           <thead>
             <tr>
+              <th>No</th>
               <th>1st Merce</th>
               <th>2nd Merce</th>
               <th>3rd Merce</th>

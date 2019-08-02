@@ -1,17 +1,5 @@
 [
   [
-    0,
-    "Alpaca",
-    "Hollow",
-    "Bunny",
-    "Slasher",
-    "Mech",
-    "Bride",
-    "Lu Bu",
-    "Oriental",
-    "Viking"
-  ],
-  [
     1,
     "Alpaca",
     "Monkey",
@@ -154,5 +142,125 @@
     "Mech",
     "Abe",
     "Bunny"
+  ],
+  [
+    14,
+    "Monkey",
+    "Hollow",
+    "Bunny",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Lu Bu",
+    "Oriental",
+    "Viking"
+  ],
+  [
+    15,
+    "Monkey",
+    "Alpaca",
+    "Bunny",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Lu Bu",
+    "Oriental",
+    "Viking"
+  ],
+  [
+    16,
+    "Alpaca",
+    "Hollow",
+    "Bunny",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Lu Bu",
+    "Oriental",
+    "Viking"
+  ],
+  [
+    17,
+    "Hollow",
+    "Monkey",
+    "Bunny",
+    "Slasher",
+    "Lu Bu",
+    "Bride",
+    "SOD",
+    "Mech",
+    "Abe"
+  ],
+  [
+    18,
+    "Hollow",
+    "Monkey",
+    "Bunny",
+    "Slasher",
+    "Alpaca",
+    "Bride",
+    "SOD",
+    "Viking",
+    "Abe"
+  ],
+  [
+    19,
+    "Monkey",
+    "Alpaca",
+    "Bunny",
+    "Slasher",
+    "Bride",
+    "Oriental",
+    "Abe",
+    "Viking",
+    "SOD"
+  ],
+  [
+    20,
+    "Alpaca",
+    "Hollow",
+    "Monkey",
+    "Bunny",
+    "Mech",
+    "Bride",
+    "Viking",
+    "Oriental",
+    "Abe"
+  ],
+  [
+    21,
+    "Bunny",
+    "Hollow",
+    "Mech",
+    "Oriental",
+    "Monkey",
+    "Alpaca",
+    "Bride",
+    "Viking",
+    "SOD"
+  ],
+  [
+    22,
+    "Monkey",
+    "Slasher",
+    "Bunny",
+    "Lu Bu",
+    "Bride",
+    "Mech",
+    "Viking",
+    "SOD",
+    "Abe"
+  ],
+  [
+    23,
+    "Lu Bu",
+    "Bunny",
+    "Hollow",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Viking",
+    "SOD",
+    "Abe"
   ]
 ]
