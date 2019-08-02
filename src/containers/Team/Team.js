@@ -69,9 +69,11 @@ class Team extends Component {
     return (
       <div>
         <div className="page-title">Episode 24 System Merce Combinations</div>
+        <Note>Episode 24 is annoying as hell so here it is.</Note>
         <Note>
           Combinations of system mercenaries I had luck in Episode 24. My
-          character is always on the last 1.
+          character is always on the last 1. This is auto skip so I have no idea
+          if my charater actually helped.
         </Note>
         <label>
           <SearchBox
@@ -87,6 +89,7 @@ class Team extends Component {
           No need for whole word. As long as some characters are matching. And
           each fighter is comma separated
         </Note>
+        <Note>Feel free to give to me your combinations.</Note>
         <TeamTable>
           <thead>
             <tr>
@@ -136,6 +139,6 @@ const TeamTable = styled.table`
   }
 `;
 const Note = styled.p`
-  margin: 0px;
+  margin: 5px 0;
   font-size: 14px;
 `;
