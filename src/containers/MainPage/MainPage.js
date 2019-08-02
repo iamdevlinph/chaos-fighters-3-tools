@@ -22,6 +22,9 @@ export default () => {
         <li>
           <NavLink to="/vip">Vip Conversion</NavLink>
         </li>
+        <li>
+          <NavLink to="/team">Team Episode 24 Merce Combination</NavLink>
+        </li>
       </ul>
 
       <strong>Recruitment Code: 1000351510</strong>

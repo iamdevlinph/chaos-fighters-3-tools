@@ -69,9 +69,16 @@ class Team extends Component {
     return (
       <div>
         <div className="page-title">Episode 24 System Merce Combinations</div>
+        <Note>
+          Combinations of system mercenaries I had luck in Episode 24. My
+          character is always on the last 1.
+        </Note>
         <label>
-          <span>Search Keywords </span>
-          <SearchBox type="text" onChange={e => this.search(e)} />
+          <SearchBox
+            type="text"
+            onChange={e => this.search(e)}
+            placeholder="Search Keywords"
+          />
         </label>
         <Note>
           Example: <strong>lu,orie,mech,bride</strong>
