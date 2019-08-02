@@ -42,50 +42,25 @@ class Team extends Component {
     if (keywords.length === 0) {
       this.updateList();
     } else {
-      // console.log('search', keywords);
-      // const filteredData = teamData.filter(team => {
-      //   // console.log('team', team);
-      //   let show = false;
-      //   keywords.forEach(word => {
-      //     team.forEach((fighter, idx) => {
-      //       // console.log(word, fighter);
-      //       if (idx !== 0 && fighter.toLowerCase().includes(word)) {
-      //         show = true;
-      //         console.log(team);
-      //         console.log(fighter, word);
-      //       }
-      //     });
-      //   });
-      //   return show;
-      // });
-
-      teamData.forEach(team => {
-        // loop team data
-        // check if each team has all the keywords
-        // console.log(team, keywords);
-        this.teamHasKeywords(team, keywords);
+      const filteredData = teamData.filter((team, teamIdx) => {
+        return this.teamHasKeywords(team, keywords, teamIdx);
       });
-
-      const filteredData = [];
 
       this.updateList(filteredData);
     }
   };
 
-  teamHasKeywords = (team, keywords) => {
-    console.log(team, keywords);
-    // let matches = 0;
-    // team.forEach(fighter => {
-    //   // loop all fighters in a team
-    //   if (fighter)
-    // });
-    // team.filter(fighter => {
-    //   console.log(object)
-    //   return fighter.includes(keywords[0])
-    // });
-    // keywords.filter(word => {
+  teamHasKeywords = (team, keywords, teamIdx) => {
+    let keywordsFound = 0;
+    keywords.forEach(word => {
+      team.forEach((fighter, idx) => {
+        if (idx !== 0 && fighter.toLowerCase().includes(word)) {
+          keywordsFound += 1;
+        }
+      });
+    });
 
-    // })
+    return keywordsFound === keywords.length;
   };
 
   render() {
@@ -98,9 +73,29 @@ class Team extends Component {
           <span>Search Keywords </span>
           <SearchBox type="text" onChange={e => this.search(e)} />
         </label>
-        <table border="1">
+        <Note>
+          Example: <strong>lu,orie,mech,bride</strong>
+        </Note>
+        <Note>
+          No need for whole word. As long as some characters are matching. And
+          each fighter is comma separated
+        </Note>
+        <TeamTable>
+          <thead>
+            <tr>
+              <th>1st Merce</th>
+              <th>2nd Merce</th>
+              <th>3rd Merce</th>
+              <th>4th Merce</th>
+              <th>5th Merce</th>
+              <th>6th Merce</th>
+              <th>7th Merce</th>
+              <th>8th Merce</th>
+              <th>9th Merce</th>
+            </tr>
+          </thead>
           <tbody>{teamList}</tbody>
-        </table>
+        </TeamTable>
       </div>
     );
   }
@@ -108,4 +103,32 @@ class Team extends Component {
 
 export default Team;
 
-const SearchBox = styled.input``;
+const SearchBox = styled.input`
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #797979;
+  border-radius: 4px;
+`;
+const TeamTable = styled.table`
+  border-collapse: collapse;
+  width: 100%;
+
+  th,
+  td {
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    background-color: #4caf50;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+`;
+const Note = styled.p`
+  margin: 0px;
+  font-size: 14px;
+`;
