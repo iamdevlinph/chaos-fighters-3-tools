@@ -54,7 +54,13 @@ class Team extends Component {
     let keywordsFound = 0;
     keywords.forEach(word => {
       team.forEach((fighter, idx) => {
-        if (idx !== 0 && fighter.toLowerCase().includes(word)) {
+        if (
+          idx !== 0 &&
+          fighter
+            .toLowerCase()
+            .replace(' ', '')
+            .includes(word)
+        ) {
           keywordsFound += 1;
         }
       });
