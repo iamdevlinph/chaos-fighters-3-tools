@@ -51,6 +51,12 @@ export default () => (
       />
       <AppRoute
         exact
+        path="/team"
+        layout={MainLayout}
+        container={loadableCons.TeamPage}
+      />
+      <AppRoute
+        exact
         path="/*"
         layout={MainLayout}
         container={loadableCons.NotFound}

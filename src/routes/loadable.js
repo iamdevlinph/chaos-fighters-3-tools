@@ -23,6 +23,10 @@ export default {
     loader: () => import('../containers/Vip/Vip'),
     loading: Loading,
   }),
+  TeamPage: Loadable({
+    loader: () => import('../containers/Team/Team'),
+    loading: Loading,
+  }),
   NotFound: Loadable({
     loader: () => import('../containers/NotFound/NotFound'),
     loading: Loading,
