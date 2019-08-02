@@ -84,12 +84,16 @@ class Team extends Component {
         </label>
         <Note>
           Example: <strong>lu,orie,mech,bride</strong>
+          <br />
+          This will search teams with Lu Bu, Oriental, Mech, Bride, etc
         </Note>
         <Note>
           No need for whole word. As long as some characters are matching. And
           each fighter is comma separated
         </Note>
-        <Note>Feel free to give to me your combinations.</Note>
+        <Note>
+          Feel free to give to me your combinations so I can add them here.
+        </Note>
         <TeamTable>
           <thead>
             <tr>
