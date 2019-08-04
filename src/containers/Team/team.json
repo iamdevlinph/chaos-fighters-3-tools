@@ -346,5 +346,65 @@
     "Abe",
     "Viking",
     "SOD"
+  ],
+  [
+    31,
+    "Monkey",
+    "Alpaca",
+    "Bunny",
+    "Hollow",
+    "Lu Bu",
+    "Mech",
+    "Bride",
+    "Viking",
+    "Abe"
+  ],
+  [
+    32,
+    "Alpaca",
+    "Hollow",
+    "Bunny",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Abe",
+    "Oriental",
+    "Viking"
+  ],
+  [
+    33,
+    "Monkey",
+    "Hollow",
+    "Bunny",
+    "Slasher",
+    "Lu Bu",
+    "Mech",
+    "Bride",
+    "Viking",
+    "Abe"
+  ],
+  [
+    34,
+    "Lu Bu",
+    "Hollow",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Viking",
+    "Oriental",
+    "Abe",
+    "Bunny"
+  ],
+  [
+    35,
+    "Lu Bu",
+    "Alpaca",
+    "Hollow",
+    "Slasher",
+    "Mech",
+    "Bride",
+    "Viking",
+    "Oriental",
+    "Abe"
   ]
 ]
